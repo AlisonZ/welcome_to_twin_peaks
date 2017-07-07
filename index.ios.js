@@ -17,3 +17,6 @@ const App = () => (
 
 //render component to the device
 AppRegistry.registerComponent('welcome_to_twin_peaks', () => App);
+
+//another tutorial had this which uses the component from Map.js to register as the main app container
+// AppRegistry.registerComponent('welcome_to_twin_peaks', () => Map);
