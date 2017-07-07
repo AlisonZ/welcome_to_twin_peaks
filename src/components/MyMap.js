@@ -21,10 +21,12 @@ class MyMap extends Component {
 
             {locations.map ((location, index) =>
                 <MapView.Marker
-                coordinate = {{
-                    latitude: location.coordinate[0],
-                    longitude: location.coordinate[1],
-                }}
+                    coordinate = {{
+                        latitude: location.coordinate[0],
+                        longitude: location.coordinate[1],
+
+                    }}
+                    title={location.tpName}
                 />
             )}
             </MapView>
