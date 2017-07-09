@@ -6,36 +6,66 @@ import MapView from 'react-native-maps';
 import { locations } from '../../data.js';
 
 class MyMap extends Component {
-    render() {
-        return (
-            // <View style = {styles.container}>
-            <MapView
-            style={styles.map}
-            initialRegion={{
+    constructor(props){
+        super(props);
+        this.state = {
+            region:{
                 latitude: 47.542085,
                 longitude: -121.836647,
                 latitudeDelta: 0.0922,
                 longitudeDelta: 0.0421,
-            }}
-            >
+            }
+        };
+        this.onRegionChange = this.onRegionChange.bind(this);
+    }
 
-            {locations.map ((location, index ) =>
-                <MapView.Marker
-                    key={index}
-                    coordinate = {{
-                        latitude: location.coordinate[0],
-                        longitude: location.coordinate[1],
+    onRegionChange(region) {
+        this.setState({ region });
+    }
 
-                    }}
-                    title={location.tpName}
-                    // image={require('../../assets/images/symbol.png')}
-                    // style={styles.marker}
+    render() {
+        return (
+            <View style={styles.container}>
+                <MapView style={styles.map}
+                    region={this.state.region}
+                    onRegionChange={this.onRegionChange}
                 />
-            )}
-            </MapView>
+            </View>
         );
     }
 };
+
+
+    // render() {
+    //     // return (
+    //     //     // <View style = {styles.container}>
+    //     //     <MapView
+    //     //     style={styles.map}
+    //     //     initialRegion={{
+    //     //         latitude: 47.542085,
+    //     //         longitude: -121.836647,
+    //     //         latitudeDelta: 0.0922,
+    //     //         longitudeDelta: 0.0421,
+    //     //     }}
+    //         >
+    //
+    //         {locations.map ((location, index ) =>
+    //             <MapView.Marker
+    //                 key={index}
+    //                 coordinate = {{
+    //                     latitude: location.coordinate[0],
+    //                     longitude: location.coordinate[1],
+    //
+    //                 }}
+    //                 title={location.tpName}
+    //                 // image={require('../../assets/images/symbol.png')}
+    //                 // style={styles.marker}
+    //             />
+    //         )}
+    //         </MapView>
+    //     );
+    // }
+// };
 
 const styles = {
     container: {
