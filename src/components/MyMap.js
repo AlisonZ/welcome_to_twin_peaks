@@ -50,6 +50,7 @@ class MyMap extends Component {
 };
 
 
+
 const styles = {
     container: {
         flex: 1,
