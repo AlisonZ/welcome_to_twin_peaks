@@ -156,7 +156,7 @@ export const locations = [
         tpName: 'Great Northern (interior)',
         realName: 'Kiana Lodge',
         notes: '',
-        coordinate: [ 47.699360, 122.583167 ],
+        coordinate: [ 47.699360, -122.583167 ],
         realPhoto: '',
         tpPhoto: '',
         info: ''
