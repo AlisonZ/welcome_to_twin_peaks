@@ -19,24 +19,20 @@ class MyMap extends Component {
             }}
             >
 
-            {locations.map ((location, index) =>
+            {locations.map ((location, index ) =>
                 <MapView.Marker
+                    key={index}
                     coordinate = {{
                         latitude: location.coordinate[0],
                         longitude: location.coordinate[1],
 
                     }}
                     title={location.tpName}
+                    // image={require('../../assets/images/symbol.png')}
+                    // style={styles.marker}
                 />
             )}
             </MapView>
-            // <MapView.Marker
-            //     coordinate= { { longitude: -122.336581, latitude: 47.627618 }}
-            //     title={"MOHAI"}
-            //     descripton={"Seattle Historical Museum"}
-            //     // image={{ uri: ".../assets/images/symbol.png"}}
-            // />
-            // </View>
         );
     }
 };
@@ -53,8 +49,12 @@ const styles = {
         height: height,
         backgroundColor: '#888'
 
-    }
-
+    },
+    // marker: {
+    //     width: 5,
+    //     height: 5,
+    //     color: 'red',
+    // },
 };
 
 export default MyMap;
