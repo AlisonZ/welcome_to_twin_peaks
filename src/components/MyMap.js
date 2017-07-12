@@ -26,9 +26,12 @@ class MyMap extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <MapView style={styles.map}
+                <MapView
+                    style={styles.map}
                     region={this.state.region}
                     onRegionChange={this.onRegionChange}
+                    // showBuildings={true}
+                    // showsMyLocationButton={true}
                 >
                 {locations.map ((location, index ) =>
                   <MapView.Marker

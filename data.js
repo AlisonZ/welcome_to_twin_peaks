@@ -102,7 +102,7 @@ export const locations = [
         tpName: "Big Ed's Gas Farm",
         realName: 'Indoor Lighting and Garden',
         notes: '',
-        coordinate: [ 47.812798, -122.321689],
+        coordinate: [ 47.523930, -121.927075],
         realPhoto: '',
         tpPhoto: '',
         info: ''
