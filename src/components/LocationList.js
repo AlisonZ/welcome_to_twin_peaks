@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import { connect } from 'react-redux';
+// // import { View, Text } from 'react-native';
+//
 class LocationList extends Component {
     render() {
-        return(
-            <View>
-                <Text>Location</Text>
-                <Text>Location</Text>
-                <Text>Location</Text>
-                <Text>Location</Text>
-                <Text>Location</Text>
-                <Text>Location</Text>
-                <Text>Location</Text>
-            </View>
-        );
+        return;
     }
 }
 
-export default LocationList;
+const mapStateToProps = state => {
+    console.log(state);
+};
+
+export default connect(mapStateToProps)(LocationList);
