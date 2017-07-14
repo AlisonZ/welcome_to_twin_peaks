@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { connect } from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
 
 
 class LocationSite extends Component {
+    renderDescription() {
+        const { location, selectedLocationName } = this.props;
+
+
+        if (location.tpName === selectedLocationName)
+        return <Text>{location.coordinate}</Text>
+    }
+
+
+
     render(){
         const { titleStyle } = styles;
-        console.log(this.   props);
+        const { tpName } = this.props.location;
+
+
         return (
-            <CardSection>
-                <Text style={titleStyle}>
-                {this.props.location.tpName}
-                </Text>
-            </CardSection>
+            <TouchableWithoutFeedback onPress={() => this.props.selectLocation(tpName)}>
+                <View>
+                    <CardSection>
+                    <Text style={titleStyle}>
+                    {tpName}
+                    </Text>
+                    </CardSection>
+                    {this.renderDescription()}
+                </View>
+            </TouchableWithoutFeedback>
         );
     }
 }
@@ -26,4 +43,8 @@ const styles = {
     }
 };
 
-export default connect(null, actions)(LocationSite);
+const mapStateToProps = state => {
+    return { selectedLocationName: state.selectedLocationName };
+};
+
+export default connect(mapStateToProps, actions)(LocationSite);
