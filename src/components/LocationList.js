@@ -1,34 +1,63 @@
 import React, { Component } from 'react';
-import { ListView } from 'react-native';
+import { Text, TouchableWithoutFeedback, View , Image } from 'react-native';
 import { connect } from 'react-redux';
-import LocationSite from './LocationSite';
-// // import { View, Text } from 'react-native';
-//
+import { CardSection } from './common';
+import * as actions from '../actions';
+
+
 class LocationList extends Component {
-    componentWillMount() {
-        const ds =  new ListView.DataSource({
-            rowHasChanged: (r1, r2) => r1 !== r2
-        });
+    renderDescription() {
+        const { location, selectedLocationName } = this.props;
 
-        this.dataSource = ds.cloneWithRows(this.props.locations);
+
+        if (location.tpName === selectedLocationName)
+            return (
+                <View>
+                <Text>hellooooooo</Text>
+                    <Image
+                    style={{ width: 50, height: 50 }}
+                    source={{ uri: location.tpPhoto }}
+                    />
+                    <Text>
+                        {location.info}
+                    </Text>
+                </View>
+
+        );
     }
 
-    renderRow(location) {
-        return <LocationSite location={location} />;
-    }
 
     render() {
-        return(
-            <ListView
-                dataSource ={this.dataSource}
-                renderRow={this.renderRow}
-            />
+        const { titleStyle } = styles;
+        const { tpName } = this.props.location;
+
+        return (
+
+            <TouchableWithoutFeedback onPress={() => this.props.selectLocation(tpName)}>
+                <View>
+                    <CardSection>
+                        <Text style={titleStyle}>
+                            {tpName}
+                        </Text>
+                    </CardSection>
+
+                    {this.renderDescription()}
+
+                </View>
+            </TouchableWithoutFeedback>
         );
     }
 }
 
-const mapStateToProps = state => {
-    return { locations: state.locations }
+const styles = {
+    titleStyle:{
+        fontSize: 18,
+        paddingLeft: 15
+    }
 };
 
-export default connect(mapStateToProps)(LocationList);
+const mapStateToProps = state => {
+    return { selectedLocationName: state.selectedLocationName };
+};
+
+export default connect(mapStateToProps, actions)(LocationList);
