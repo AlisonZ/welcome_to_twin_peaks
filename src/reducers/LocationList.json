@@ -5,8 +5,8 @@
         "notes": "",
         "coordinate": [ 47.510119, -121.841132 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXksHJ4i28ALnYf3q3b5z8IdAWFQdvaOmF4owG3sM0xDJVNIu2",
+        "info": "Mr. Martell, Andy moved his knight without doing the little hook thing. Agent Cooper loves coffee. Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee. Did she tell you that there was no goodness in the world? Consumed fifteen doughnuts today, Diane. All jelly. I'll be injecting my insulin in four minutes."
     },
     {
         "tpName": "Palmer House",
@@ -14,8 +14,8 @@
         "notes": "",
         "coordinate": [ 47.973639,  -122.220710 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://welcometotwinpeaks.com/wp-content/uploads/twin-peaks-house-kickstarter.jpg",
+        "info": "It's the secrets people keep that destroy any chance they have of happiness and I don't want us to be like that. THAT'S THE KIND OF GIRL THAT MAKES YOU WISH YOU SPOKE A LITTLE FRENCH. YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT. Leo Johnson was shot, Jacques Renault was strangled, the mill burned, Shelley and Pete got smoke inhalation, Catherine and Josie are missing, Nadine is in a coma from taking sleeping pills. What’s up doc? Just a few words before I go to sleep. I feel like I’m going to dream tonight."
     },
     {
         "tpName": "Horne's Department Store (exterior)",
@@ -23,8 +23,8 @@
         "notes": "",
         "coordinate": [ 47.600212, -122.331179 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://vignette3.wikia.nocookie.net/twinpeaks/images/a/a9/Hornes.jpg/revision/latest?cb=20160609190636",
+        "info": "The beautiful thing about treasure is that it exists. It exists to be found. I reject absolutely: revenge, aggression and retaliation. The foundation of such a method... is love. I love you Sheriff Truman. Diane... 10:00 a.m. at the Great Northern. Fellas, coincidence and fate figure largely in our lives. Look at us. Two men apiece and we don't know what to do with any of the four of them."
     },
     {
         "tpName": "Mt. Si Hotel",
@@ -32,8 +32,8 @@
         "notes": "",
         "coordinate": [ 47.495626,  -121.787847 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://agentspooky.files.wordpress.com/2010/07/img_0653.png",
+        "info": "YOU'LL HAVE TO SPEAK UP. HEARING'S GONE. LONG STORY. GOT THESE THINGS CRANKED UP TO THE MAX. Yes, look in the mirror. What do you see? Is it a dream, or a nightmare? I used the Basalm shampoo along with the conditioner courtesy of the hotel and delivering what it promised. A silky manageability. Wanna know why I'm whittling? OK, I'll bite again. Why are you whittling? Because that's what you do in a town where a yellow light still means slow down and not speed up. The old rustic sucker-punch, huh? A hail of bullets would be nice!"
     },
     {
         "tpName": "Sparkwood & 21",
@@ -41,8 +41,8 @@
         "notes": "",
         "coordinate": [ 47.530074, -121.805525 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://lh5.googleusercontent.com/-cx34zG_XrY0/TK5lmTAaBXI/AAAAAAAAMyY/AqigDGPxz7w/s1288/IMG_7725.JPG",
+        "info": "There's a sort of evil out there. Something very, very strange in these old woods. Because normally if a stranger walked into my station talking this kind of crap, he'd be looking for his teeth two blocks up on Queer Street. Here's something we haven't seen before: a mount of dirt. Approximately a foot and a half in diameter. Ah, man that hits the spot. Nothing like a great cup of black coffee. It is a story of many, but begins with one - and I knew her. The one leading to the many is Laura Palmer."
     },
     {
         "tpName": "Leland & Laura see Gerald",
@@ -50,8 +50,8 @@
         "notes": "",
         "coordinate": [ 47.525378, 121.812661 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://2.bp.blogspot.com/-Ip51o_bBPkg/WNU3rnBwLuI/AAAAAAAAlD4/6SJuNqi-4o87C8FGKdnI3eq0QulUomXfwCEw/s1600/Picture%2B6.png",
+        "info": "I  believe I was visited by a giant last night. Twice. Pie. Whoever invented the pie? Here was a great person. I feel like I know her, but sometimes my arms bend back. When we meet again, it won't be me. Albert's path is a strange and difficult one."
     },
     {
         "tpName": "Fat Trout Trailer Park",
@@ -59,8 +59,8 @@
         "notes": "",
         "coordinate": [ 47.525900, -121.820469 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "data:image/jpeg;base64,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",
+        "info": "In Twin Peaks, we specialize in cherry pie and huckleberry pie. I'll see you in my dreams. Harry, I have no idea where this will lead us, but I have a definite feeling it will be a place both wonderful and strange. Leo doesn't talk, he hits. Now Dwayne you can always shoot later. Talk first."
     },
     {
         "tpName": "Traffic Light",
@@ -68,8 +68,8 @@
         "notes": "",
         "coordinate": [ 47.495461, 121.786937 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://covenconstruction.files.wordpress.com/2011/06/traffic-lights-630-75.jpg",
+        "info": "I carry a log — yes. Is it funny to you? It is not to me. I am known as the Log Lady. There is a story behind that. To introduce this story, let me just say it encompasses the All - it is beyond the 'Fire', though few would know that meaning. The only thing Columbus discovered was that he was lost! In another time, another culture, he may have been a seer, a shaman priest. In our world he's a shoe salesman, and lives among the shadows."
     },
     {
         "tpName": "Hap's Diner",
@@ -77,8 +77,8 @@
         "notes": "",
         "coordinate": [ 47.570699, -121.886815 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://agentspooky.files.wordpress.com/2010/07/screenshot0172.png?w=584",
+        "info": "Give me a donut. If there's chessboards in heaven, you'll find Jose sittin' across from the Lord. One day my log will have something to say about this. My log saw something that night. She's filled with secrets. Where we're from, the birds sing a pretty song, and there's always music in the air. Oh, I've got compassion running out of my nose, pal! I'm the Sultan of Sentiment!"
     },
     {
         "tpName": "Leo & Shelley Johnson's House",
@@ -86,8 +86,8 @@
         "notes": "",
         "coordinate": [ 47.525363, -121.843070 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://welcometotwinpeaks.com/wp-content/uploads/johnson-fire-walk-with-me-785x425.jpg",
+        "info": "If we're not at the right place at exactly the right time, we won't find our way in. Achievement is its own reward, pride obscures it. WHAT A BEAUTY. REMINDS ME OF THAT STATUE, THE BABE WITHOUT THE ARMS. I've got one man too many in my life and I'm married to him. Sound familiar? Audrey, look, I know that I haven’t been a very good father. Oh hell, who am I kidding? When have I ever been anything but a sleazy rapacious heel?"
     },
     {
         "tpName": "Ed & Nadine Hurley's House",
@@ -95,8 +95,8 @@
         "notes": "",
         "coordinate": [ 47.523930, -121.927075 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://c1.staticflickr.com/4/3476/3372486279_30a493da9a_b.jpg",
+        "info": "A drunken man walks in a way that is quite impossible for a sober man to imitate, and vice versa. Nothing beats the taste sensation when maple syrup collides with ham. All things considered, being shot is not as bad as I always thought it might be. As long as you can keep the fear from your mind. But I guess you can say that about almost anything in life. Secrets are dangerous things, Audrey. Stomach contents revealed… let's see, beer cans, a Maryland license plate, half a bicycle tire, a goat... and a small wooden puppet. Goes by the name of Pinocchio."
     },
     {
         "tpName": "Big Ed's Gas Farm",
@@ -104,8 +104,8 @@
         "notes": "",
         "coordinate": [ 47.523930, -121.927075],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://vignette3.wikia.nocookie.net/twinpeaks/images/a/a8/BigEdsGasFarm.jpg/revision/latest?cb=20170116042141",
+        "info": "Wow, Bob, wow. Fire walk with me. Laura is the one. I'd rather be his whore... than your wife! God, James is sweet, but he’s so dumb, and right now I can only take so much of sweet. One woman can make you fly like an eagle, another can give you the strength of a lion, but only one in the cycle of life can fill your heart with wonder and the wisdom that you have known a singular joy. I wrote that for my girlfriend."
     },
     {
         "tpName": "The Roadhouse (interior)",
@@ -113,8 +113,8 @@
         "notes": "",
         "coordinate": [47.617852, -122.334844 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://s-media-cache-ak0.pinimg.com/originals/04/8b/71/048b71872503ade5a5f5a372e3495ef1.jpg",
+        "info": "Let's rock! I've got good news. That gum you like is going to come back in style. There's a fish in the percolator! Are you Laura Palmer? Cooper, you remind me today of a small Mexican chi-wow-wow. I am 100% sure that we're not completely sure."
     },
     {
         "tpName": "The Roadhouse (exterior)",
@@ -122,8 +122,8 @@
         "notes": "",
         "coordinate": [ 47.567307, -121.887717 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://welcometotwinpeaks.com/wp-content/uploads/outside-the-roadhouse-bang-bang-bar-785x388.jpg",
+        "info": "Laura had a lot of secrets. Harry, we're in trouble. If the door to the Black Lodge does exist, it probably exists at a point in time. I have no idea where this will lead us. But I have a definite feeling it will be a place both wonderful and strange. The mystery of the woods. The woods surrounding Twin Peaks. Got to find out what kind of sheets these are; not cotton, not rayon, silky. Damn fine sheets. I'm gonna get naked and slide around in them."
     },
     {
         "tpName": "Twin Peaks High School",
@@ -131,8 +131,8 @@
         "notes": "",
         "coordinate": [ 47.522699, -121.816682],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://s-media-cache-ak0.pinimg.com/736x/e4/bd/85/e4bd859ca16651ece7f36730a4f4f044--david-lynch-twin-peaks.jpg",
+        "info": "Fat load of good that'll do me. Don't take the ring, Laura. One day the sadness will end. The owls are not what they seem. HEADIN' ON OVER TO BEND, OREGON. WHOLE LOTTA SHAKIN' GOING ON IN BEND!"
     },
     {
         "tpName": "Laura's Log",
@@ -140,8 +140,8 @@
         "notes": "Behind the log is a tree where the bird from the credits sat.",
         "coordinate": [ 47.699360, -122.583167 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://s-media-cache-ak0.pinimg.com/736x/24/f3/34/24f334749c8b9554bae4dfaaaa098232--twin-peaks-laura-palmer.jpg",
+        "info": "Damn good coffee! Replacing the quiet elegance of the dark suit and tie with the casual indifference of these muted earth tones is a form of fashion suicide, but, uh, call me crazy — on you it works. Call it what you want. A darkness, a presence. It takes many forms but... its been out there for as long as anyone can remember and we've always been here to fight it. Oh yeah, well I've had about enough of morons and half wits, dolts, dunces, dullards and dumbbells... and you, you chowder-head yokel, you blithering hayseed - you've had enough of me? Audrey, there are many cures for a broken heart. But nothing quite like a trout's leap in the moonlight."
     },
     {
         "tpName": "Blue Pine Ridge",
@@ -149,8 +149,8 @@
         "notes": "",
         "coordinate": [ 47.699360, -122.583167 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://vignette2.wikia.nocookie.net/twinpeaks/images/8/80/BluePineLodge.jpg/revision/latest?cb=20170117141646",
+        "info": "Douglas firs... The night is young. Now I’m going to get the food and you're going to get dressed. I only have time for coffee. You might practice walking without dragging your knuckles on the floor. Heh heh heh. I love pie with coffe"
     },
     {
         "tpName": "Great Northern (interior)",
@@ -158,8 +158,8 @@
         "notes": "",
         "coordinate": [ 47.699360, -122.583167 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://s-media-cache-ak0.pinimg.com/originals/bb/cd/87/bbcd87a100d6e932db34f186de57a1e8.jpg",
+        "info": "I'll see you again in twenty-five years. Damn fine coffee! And hot! We call her the Log Lady. Any relations with the dwarf? This must be where pies go when they die."
     },
     {
         "tpName": "Twin Peaks Sheriff Office",
@@ -167,8 +167,8 @@
         "notes": "The folks here are fine with fans coming in and looking at the sheriff's office!",
         "coordinate": [ 47.537936, -121.811524 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://pic1.filmovamista.cz/img/1397-Twin-Peaks/29207-Sheriff-s-Department-miniature.png",
+        "info": "The trail narrows, Diane. I'm close, but the last few steps are always the darkest and most difficult. I'll tell you this: his disappearance has implications that go so far beyond national security the cold war seems like a case of the sniffles. COOPER, YOU REMIND ME TODAY OF A SMALL MEXICAN CHIHUAHUA. 'J'ai une âme solitaire.' I am a lonely soul. Poor guy. Am I being too secretive? No. One can never answer questions at the wrong moment."
     },
     {
         "tpName": "Packard Sawmill",
@@ -176,8 +176,8 @@
         "notes":"",
         "coordinate": [ 47.537936, 121.811524],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://vignette4.wikia.nocookie.net/twinpeaks/images/5/5f/PSM.jpg/revision/latest?cb=20120601190537",
+        "info": "There are many stories in Twin Peaks - some of them are sad, some funny. Some of them are stories of madness, of violence. Some are ordinary. Yet they all have about them a sense of mystery - the mystery of life. Sometimes, the mystery of death. There's nothing quite like urinating in the open air. DON'T LET'EM RATTLE YOU, COOP. This morning, I showered for nine minutes. Found seventeen hairs; three curly, fourteen straight. Coop, I may be wearing a dress, but I still pull my panties on one leg at a time if you know what I mean."
     },
     {
         "tpName": "The Great Northern(exterior)",
@@ -185,8 +185,8 @@
         "notes": "",
         "coordinate": [ 47.542085, 121.836647],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://2.bp.blogspot.com/-iSXTZM_TL7Q/V84BQAXPZzI/AAAAAAAATS4/7Ez6rJ_JKdEWHxBNMupkNz32pOI66391gCLcB/s1600/audrey_great_northern.jpg",
+        "info": "Cooper you may be fearless in this world, but there are other worlds. How's Annie? How's Annie? How's Annie? Is a dog man's best friend? I had a dog. The dog was large. It ate my garden, all the plants, and much earth. The dog ate so much earth it died. Its body went back to the earth. I have a memory of this dog. The memory is all that I have left of my dog. He was black - and white. This place I speak of, is known as the Black Lodge. And I intend to find it."
     },
     {
         "tpName": "The Falls",
@@ -194,8 +194,8 @@
         "notes": "",
         "coordinate": [ 47.541721, -121.837702 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "data:image/jpeg;base64,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",
+        "info": "Mr. Martell, Andy moved his knight without doing the little hook thing. Agent Cooper loves coffee. Harry, I'm going to let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it. Don't wait for it. Just let it happen. It could be a new shirt at the men's store, a catnap in your office chair, or two cups of good, hot black coffee. Did she tell you that there was no goodness in the world? Consumed fifteen doughnuts today, Diane. All jelly. I'll be injecting my insulin in four minutes."
     },
     {
         "tpName": "Double R Diner",
@@ -203,8 +203,8 @@
         "notes": "",
         "coordinate": [ 47.495169, 121.786851 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://2.bp.blogspot.com/-p9GVKXqm4NY/V74EN_YASrI/AAAAAAAATNM/ABI70yONqB4wn4krEQemDA5kJlZweSFoACLcB/s1600/rr_exterior.jpg",
+        "info": "It's the secrets people keep that destroy any chance they have of happiness and I don't want us to be like that. THAT'S THE KIND OF GIRL THAT MAKES YOU WISH YOU SPOKE A LITTLE FRENCH. YOU ARE WITNESSING A FRONT THREE-QUARTER VIEW OF TWO ADULTS SHARING A TENDER MOMENT. Leo Johnson was shot, Jacques Renault was strangled, the mill burned, Shelley and Pete got smoke inhalation, Catherine and Josie are missing, Nadine is in a coma from taking sleeping pills. What’s up doc? Just a few words before I go to sleep. I feel like I’m going to dream tonight."
     },
     {
         "tpName": "Ronette's Bridge",
@@ -212,8 +212,8 @@
         "notes": "",
         "coordinate": [ 47.529870, -121.806822 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://welcometotwinpeaks.com/wp-content/uploads/ronette-bridge.jpg",
+        "info": "The beautiful thing about treasure is that it exists. It exists to be found. I reject absolutely: revenge, aggression and retaliation. The foundation of such a method... is love. I love you Sheriff Truman. Diane... 10:00 a.m. at the Great Northern. Fellas, coincidence and fate figure largely in our lives. Look at us. Two men apiece and we don't know what to do with any of the four of them."
     },
     {
         "tpName": "Welcome to Twin Peaks sign",
@@ -221,7 +221,7 @@
         "notes": "",
         "coordinate": [ 47.525519, -121.785502 ],
         "realPhoto": "",
-        "tpPhoto": "",
-        "info": ""
+        "tpPhoto": "https://welcometotwinpeaks.com/wp-content/uploads/welcome-to-twin-peaks-sign-51201.jpg",
+        "info": "YOU'LL HAVE TO SPEAK UP. HEARING'S GONE. LONG STORY. GOT THESE THINGS CRANKED UP TO THE MAX. Yes, look in the mirror. What do you see? Is it a dream, or a nightmare? I used the Basalm shampoo along with the conditioner courtesy of the hotel and delivering what it promised. A silky manageability. Wanna know why I'm whittling? OK, I'll bite again. Why are you whittling? Because that's what you do in a town where a yellow light still means slow down and not speed up. The old rustic sucker-punch, huh? A hail of bullets would be nice!"
     },
 ];

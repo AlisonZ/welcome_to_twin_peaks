@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { Text, TouchableWithoutFeedback, View , Image } from 'react-native';
 import { connect } from 'react-redux';
 import { CardSection } from './common';
 import * as actions from '../actions';
@@ -11,17 +11,28 @@ class LocationSite extends Component {
 
 
         if (location.tpName === selectedLocationName)
-        return <Text>{location.coordinate}</Text>
+        return (
+            <View>
+                <Image
+                    style={{width: 50, height: 50}}
+                    source={{uri:location.tpPhoto}}
+                    // source={require("../img/symbol.png")}
+                    // source={require(location.tpPhoto)}
+                    />
+                <Text>
+                    {location.info}
+                </Text>
+            </View>
+        );
     }
-
 
 
     render(){
         const { titleStyle } = styles;
-        const { tpName } = this.props.location;
-
+        const { tpName, tpPhoto} = this.props.location;
 
         return (
+
             <TouchableWithoutFeedback onPress={() => this.props.selectLocation(tpName)}>
                 <View>
                     <CardSection>
