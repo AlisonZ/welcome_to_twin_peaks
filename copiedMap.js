@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 var { height, width } = Dimensions.get('window');
-import { connect } from 'react-redux';
 import ReactNative from 'react-native';
-import { View, Dimensions, TouchableOpacity, Text } from 'react-native';
+import { View, Dimensions, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
-// import { locations } from './reducers/LocationList.json';
+import { locations } from './reducers/LocationList.json';
 
 class MyMap extends Component {
     constructor(props){
@@ -25,33 +24,35 @@ class MyMap extends Component {
     }
 
     render() {
-        const { locations } = this.props;
-        // console.log('this is props', this.props);
-        console.log('this is location', locations);
-        console.log('this is state:', this.state);
         return (
             <View style={styles.container}>
                 <MapView
-                style={styles.map}
-                region={this.state.region}
-                onRegionChange={this.onRegionChange}
+                    style={styles.map}
+                    region={this.state.region}
+                    onRegionChange={this.onRegionChange}
+                    // showBuildings={true}
+                    // showsMyLocationButton={true}
                 >
-                {locations.map((location, index) =>
-                    <MapView.Marker
-                    key={index}
-                    coordinate={{
-                        latitude: location.coordinate[0],
-                        longitude: location.coordinate[1],
+                {locations.map ((location, index ) =>
+                  <MapView.Marker
+                      key={index}
+                      coordinate = {{
+                          latitude: location.coordinate[0],
+                          longitude: location.coordinate[1],
 
-                    }}
-                    title={location.tpName}
-                    />
-                )}
+                      }}
+                      title={location.tpName}
+                      // image={require('../../assets/images/symbol.png')}
+                      // style={styles.marker}
+                  />
+              )}
                 </MapView>
             </View>
         );
     }
-}
+};
+
+
 
 const styles = {
     container: {
@@ -73,10 +74,4 @@ const styles = {
     // },
 };
 
-const mapStateToProps = state => {
-    return { locations: state.locations }
-};
-
-export default connect(mapStateToProps)(MyMap);
-
-// export default MyMap;
+export default MyMap;

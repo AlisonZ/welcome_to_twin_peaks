@@ -4,16 +4,16 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Header } from './components/common';
 import reducers from './reducers';
-// import Router from './Router';
-import LocationList from './components/LocationList';
+import Router from './Router';
+// import LocationList from './components/LocationList';
+import MyMap from './components/MyMap'
 
 class App extends Component {
-    render (){
+    render() {
         return (
             <Provider store={createStore(reducers)}>
-                <View style={ {flex: 1} }>
-                    <Header>Work Please!</Header>
-                    <LocationList />
+                <View style={{ flex: 1 }}>
+                    <Router />
                 </View>
             </Provider>
         );
