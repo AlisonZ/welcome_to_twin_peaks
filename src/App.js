@@ -11,7 +11,7 @@ class App extends Component {
     render (){
         return (
             <Provider store={createStore(reducers)}>
-                <View>
+                <View style={ {flex: 1} }>
                     <Header>Work Please!</Header>
                     <LocationList />
                 </View>
