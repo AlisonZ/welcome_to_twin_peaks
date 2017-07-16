@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image } from 'react-native';
-import { CardSection } from './common';
+import { CardSection, Card } from './common';
 
 class LocationShow extends Component {
 
@@ -8,19 +8,24 @@ class LocationShow extends Component {
         const { tpName, info, tpPhoto } = this.props.location;
         return (
             <View>
-                <CardSection>
-                    <Text>
-                        {tpName}
-                    </Text>
-                    <Image
-                        source={{uri:tpPhoto}}
-                    />
-                    <Text>
-                        {info}
-                    </Text>
-
-                </CardSection>
-
+                <Card>
+                    <CardSection>
+                        <Text>
+                            {tpName}
+                        </Text>
+                    </CardSection>
+                    <CardSection>
+                        <Image
+                            style={{width: 150, height: 150}}
+                            source={{ uri: tpPhoto }}
+                        />
+                    </CardSection>
+                    <CardSection>
+                        <Text>
+                            {info}
+                        </Text>
+                    </CardSection>
+                </Card>
             </View>
         );
     }

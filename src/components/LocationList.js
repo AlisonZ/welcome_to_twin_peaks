@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View , Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { CardSection } from './common';
+import { CardSection, Card } from './common';
 import * as actions from '../actions';
 
 
@@ -19,11 +19,13 @@ class LocationList extends Component {
         return (
             <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
                 <View>
-                    <CardSection>
-                        <Text style={titleStyle}>
-                            {tpName}
-                        </Text>
-                    </CardSection>
+                    <Card>
+                        <CardSection>
+                            <Text style={titleStyle}>
+                                {tpName}
+                            </Text>
+                        </CardSection>
+                    </Card>
                 </View>
             </TouchableWithoutFeedback>
         );

@@ -18,8 +18,6 @@ const RouterComponent = () => {
                 title="Mappy"
             />
             <Scene
-            onRight={() => Actions.locationShow()}
-            rightTitle="Show Me"
             key="locationListLogic"
             component={LocationListLogic}
             title="Locations"
