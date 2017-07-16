@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { ListView } from 'react-native';
+import { ListView, View, TouchableWithoutFeedback, Text } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
-// // import { View, Text } from 'react-native';
 //
 class LocationListLogic extends Component {
     componentWillMount() {
@@ -13,8 +12,15 @@ class LocationListLogic extends Component {
         this.dataSource = ds.cloneWithRows(this.props.locations);
     }
 
+
     renderRow(location) {
-        return <LocationList location={location} />;
+        return (
+            // <TouchableWithoutFeedback>
+                <View>
+                    <LocationList location={location} />
+                </View>
+            // </TouchableWithoutFeedback>
+        );
     }
 
     render() {
