@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { ListView, View, TouchableWithoutFeedback, Text } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
+import { ListContainer } from './styling/ListContainer';
 //
 class LocationListLogic extends Component {
     componentWillMount() {
@@ -23,10 +24,12 @@ class LocationListLogic extends Component {
 
     render() {
         return(
-            <ListView
-                dataSource ={this.dataSource}
-                renderRow={this.renderRow}
-            />
+            <ListContainer>
+                <ListView
+                    dataSource ={this.dataSource}
+                    renderRow={this.renderRow}
+                />
+            </ListContainer>
         );
     }
 }

@@ -3,6 +3,7 @@ import { Text, TouchableWithoutFeedback, View , Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { CardSection, Card } from './common';
+import { ListContainer } from './styling/ListContainer'
 import * as actions from '../actions';
 
 

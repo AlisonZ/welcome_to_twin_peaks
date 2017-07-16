@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image } from 'react-native';
 import { CardSection, Card } from './common';
+import { ShowContainer } from './styling/ShowContainer';
 
 class LocationShow extends Component {
 
@@ -8,7 +9,7 @@ class LocationShow extends Component {
         const { tpName, info, tpPhoto } = this.props.location;
         return (
             <View>
-                <Card>
+                <ShowContainer>
                     <CardSection>
                         <Text>
                             {tpName}
@@ -25,7 +26,7 @@ class LocationShow extends Component {
                             {info}
                         </Text>
                     </CardSection>
-                </Card>
+                </ShowContainer>
             </View>
         );
     }
