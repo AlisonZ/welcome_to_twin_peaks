@@ -8,31 +8,22 @@ import * as actions from '../actions';
 
 class LocationList extends Component {
 
-    renderDescription() {
-        const { location, selectedLocationName } = this.props;
-
-        // Actions.LocationShow(location);
-        if (location.tpName === selectedLocationName)
-            Actions.locationShow();
+    onRowPress() {
+        Actions.locationShow({ location: this.props.location });
     }
-
 
     render() {
         const { titleStyle } = styles;
         const { tpName } = this.props.location;
 
         return (
-
-            <TouchableWithoutFeedback onPress={() => this.props.selectLocation(tpName)}>
+            <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
                 <View>
                     <CardSection>
                         <Text style={titleStyle}>
                             {tpName}
                         </Text>
                     </CardSection>
-
-                    {this.renderDescription()}
-
                 </View>
             </TouchableWithoutFeedback>
         );

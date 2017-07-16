@@ -26,9 +26,6 @@ class MyMap extends Component {
 
     render() {
         const { locations } = this.props;
-        // console.log('this is props', this.props);
-        console.log('this is location', locations);
-        console.log('this is state:', this.state);
         return (
             <View style={styles.container}>
                 <MapView
@@ -78,5 +75,3 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(MyMap);
-
-// export default MyMap;

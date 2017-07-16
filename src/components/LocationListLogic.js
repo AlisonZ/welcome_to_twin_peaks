@@ -15,11 +15,9 @@ class LocationListLogic extends Component {
 
     renderRow(location) {
         return (
-            // <TouchableWithoutFeedback>
                 <View>
                     <LocationList location={location} />
                 </View>
-            // </TouchableWithoutFeedback>
         );
     }
 
