@@ -5,6 +5,7 @@ import HelloWorld from './components/helloWorld';
 import MyMap from './components/MyMap';
 import LocationListLogic from './components/LocationListLogic';
 import LocationList from './components/LocationList';
+import LocationShow from './components/LocationShow';
 const RouterComponent = () => {
     return (
         <Router>
@@ -15,8 +16,15 @@ const RouterComponent = () => {
                 component={MyMap}
                 title="Mappy"
             />
+            <Scene
+            onRight={() => Actions.locationShow()}
+            rightTitle="Show Me"
+            key="locationListLogic"
+            component={LocationListLogic}
+            title="Locations"
+            />
+            <Scene key="locationShow" component={LocationShow} title="Site" />
             <Scene key="helloWorld" component={HelloWorld} title="Hi There" />
-            <Scene key="locationListLogic" component={LocationListLogic} title="Locations" />
         </Router>
     );
 };
