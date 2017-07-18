@@ -26,10 +26,6 @@ class MyMap extends Component {
     }
 
     markerClick(location) {
-        console.log('marker was clicked');
-        console.log('this is location', location);
-        // console.log('this is props.location', props.location);
-
         Actions.locationShow({ location: location });
     }
 

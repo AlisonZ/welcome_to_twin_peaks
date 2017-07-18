@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { Scene, Router, Actions } from 'react-native-router-flux';
-import HelloWorld from './components/helloWorld';
 import MyMap from './components/MyMap';
 import LocationListLogic from './components/LocationListLogic';
 import LocationList from './components/LocationList';
 import LocationShow from './components/LocationShow';
+import WelcomePage from './components/WelcomePage';
 
 const RouterComponent = () => {
     return (
@@ -22,8 +22,8 @@ const RouterComponent = () => {
             component={LocationListLogic}
             title="Locations"
             />
+            <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial/>
             <Scene key="locationShow" component={LocationShow} title="Site" />
-            <Scene key="helloWorld" component={HelloWorld} title="Hi There" />
         </Router>
     );
 };

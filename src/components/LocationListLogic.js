@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View, TouchableWithoutFeedback, Text } from 'react-native';
+import { ListView, View } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
 import { ListContainer } from './styling/ListContainer';
