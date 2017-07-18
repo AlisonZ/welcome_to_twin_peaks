@@ -3,6 +3,7 @@ var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import ReactNative from 'react-native';
 import { View, Dimensions, TouchableOpacity, Text } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import MapView from 'react-native-maps';
 // import { locations } from './reducers/LocationList.json';
 
@@ -24,9 +25,12 @@ class MyMap extends Component {
         this.setState({ region });
     }
 
-    markerClick() {
+    markerClick(location) {
         console.log('marker was clicked');
-        console.log('this is state', this.state);
+        console.log('this is location', location);
+        // console.log('this is props.location', props.location);
+
+        Actions.locationShow({ location: location });
     }
 
     render() {
@@ -45,7 +49,7 @@ class MyMap extends Component {
                         latitude: location.coordinate[0],
                         longitude: location.coordinate[1],
                     }}
-                    onPress={() => this.markerClick()}
+                    onPress={() => this.markerClick(location)}
                     title={location.tpName}
                     />
                 )}
