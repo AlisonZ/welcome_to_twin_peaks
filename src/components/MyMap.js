@@ -24,6 +24,11 @@ class MyMap extends Component {
         this.setState({ region });
     }
 
+    markerClick() {
+        console.log('marker was clicked');
+        console.log('this is state', this.state);
+    }
+
     render() {
         const { locations } = this.props;
         return (
@@ -39,8 +44,8 @@ class MyMap extends Component {
                     coordinate={{
                         latitude: location.coordinate[0],
                         longitude: location.coordinate[1],
-
                     }}
+                    onPress={() => this.markerClick()}
                     title={location.tpName}
                     />
                 )}
