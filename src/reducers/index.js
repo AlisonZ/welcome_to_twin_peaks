@@ -7,5 +7,4 @@ export default combineReducers ({
     locations: LocationReducer,
     selectedLocationName: SelectionReducer,
     mapSites: MapReducer
-
 });

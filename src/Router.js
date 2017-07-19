@@ -6,6 +6,7 @@ import LocationListLogic from './components/LocationListLogic';
 import LocationList from './components/LocationList';
 import LocationShow from './components/LocationShow';
 import WelcomePage from './components/WelcomePage';
+import UserLocation from './components/UserLocation';
 
 const RouterComponent = () => {
     return (
@@ -22,7 +23,8 @@ const RouterComponent = () => {
             component={LocationListLogic}
             title="Locations"
             />
-            <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial/>
+            <Scene key="userLocation" component={UserLocation} title="User Location" />
+            <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" />
             <Scene key="locationShow" component={LocationShow} title="Site" />
         </Router>
     );

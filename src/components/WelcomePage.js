@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Image, TouchableWithoutFeedback } from 'react-native';
+import { Dimensions, Image, TouchableWithoutFeedback } from 'react-native';
+var { height, width } = Dimensions.get('window');
 import { Actions } from 'react-native-router-flux';
 
 class WelcomePage extends Component {
@@ -23,9 +24,8 @@ welcomeClick() {
 
 const styles = {
     sign: {
-        flex: 1,
-        width: null,
-        height: null
+        width: width,
+        height: height
     }
 };
 
