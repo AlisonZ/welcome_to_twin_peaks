@@ -24,7 +24,7 @@ const RouterComponent = () => {
             title="Locations"
             />
             <Scene key="userLocation" component={UserLocation} title="User Location" />
-            <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" />
+            <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial/>
             <Scene key="locationShow" component={LocationShow} title="Site" />
         </Router>
     );

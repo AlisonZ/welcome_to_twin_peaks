@@ -73,9 +73,8 @@ class MyMap extends Component {
     }
 
     render() {
-        console.log('render ran');
-        console.log('state is   ', this.state.currentLocation);
         const { locations } = this.props;
+
         return (
             <View style={styles.container}>
                 <MapView
@@ -102,6 +101,8 @@ class MyMap extends Component {
                             longitude: this.state.currentLocation.longitude
                         }}
                         title='mypin'
+                        image={require('../img/symbol.png')}
+                        style={styles.pinStyle}
                     />
                 }
                 </MapView>
@@ -122,11 +123,13 @@ const styles = {
         height: height,
         backgroundColor: '#888'
     },
-    // marker: {
-    //     width: 5,
-    //     height: 5,
-    //     color: 'red',
-    // },
+
+    pinStyle: {
+        width: 5,
+        height: 5,
+        backgroundColor: 'red'
+    }
+
 };
 
 const mapStateToProps = state => {
