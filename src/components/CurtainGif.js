@@ -15,7 +15,7 @@ class CurtainGif extends Component {
         return (
             <Image
             style={styles.sign}
-            source={require('../img/coop_falling.gif')}
+            source={require('../img/curtains.gif')}
             />
         );
     }
