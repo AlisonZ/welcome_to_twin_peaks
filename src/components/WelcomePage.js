@@ -6,7 +6,7 @@ import { Actions } from 'react-native-router-flux';
 class WelcomePage extends Component {
 
 welcomeClick() {
-    Actions.map();
+    Actions.curtainGif();
 }
 
     render() {
