@@ -14,8 +14,7 @@ welcomeClick() {
             <TouchableWithoutFeedback onPress={() => this.welcomeClick()}>
                 <Image
                 style={styles.sign}
-                source={{ uri: 'https://welcometotwinpeaks.com/wp-content/uploads/welcome-to-twin-peaks-sign-51201.jpg' }}
-                resizeMode={Image.resizeMode.stretch}
+                source={require('../img/welcome-to-twin-peaks-sign.jpg')}
                 />
             </TouchableWithoutFeedback>
         );

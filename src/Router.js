@@ -8,13 +8,11 @@ import LocationShow from './components/LocationShow';
 import WelcomePage from './components/WelcomePage';
 import UserLocation from './components/UserLocation';
 import CurtainGif from './components/CurtainGif';
-import HelloWorld from './components/HelloWorld';
 
 const RouterComponent = () => {
     return (
         <Router>
         <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial />
-        <Scene key="helloWorld" component={HelloWorld} title="Hello World" />
         <Scene key="curtainGif" component={CurtainGif} title="Hellooo-ooo-ooo"  />
             <Scene
                 onRight={() => Actions.locationListLogic()}
