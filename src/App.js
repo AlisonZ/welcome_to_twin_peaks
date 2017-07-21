@@ -13,7 +13,7 @@ class App extends Component {
         return (
             <Provider store={createStore(reducers)}>
                 <View style={{ flex: 1 }}>
-                    <Router />
+                    <Router/>
                 </View>
             </Provider>
         );

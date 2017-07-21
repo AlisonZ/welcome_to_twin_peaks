@@ -11,11 +11,11 @@ welcomeClick() {
 
     render() {
         return (
-            <TouchableWithoutFeedback onPress={() => this.welcomeClick()} >
+            <TouchableWithoutFeedback onPress={() => this.welcomeClick()}>
                 <View style={styles.wrapper}>
                     <Image
-                    source={require('../img/falls.jpg')}
                     style={styles.image}
+                    source={require('../img/falls.jpg')}
                     />
                 </View>
             </TouchableWithoutFeedback>
@@ -24,13 +24,14 @@ welcomeClick() {
 }
 
 const styles = {
-    wrapper:{
-        flex: 1,
+    wrapper: {
+        flex: 1
     },
     image: {
         flex: 1,
+        resizeMode: 'stretch',
         width: width,
-        resizeMode: 'stretch'
+        // height: height
     }
 };
 
