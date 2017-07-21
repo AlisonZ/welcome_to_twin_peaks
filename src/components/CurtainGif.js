@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, Image } from 'react-native';
+import { View, Dimensions, Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 var { height, width } = Dimensions.get('window');
 
@@ -8,23 +8,29 @@ class CurtainGif extends Component {
         this.timeoutHandle = setTimeout(() => {
             console.log('i want this to work!');
             Actions.map();
-        }, 1750);
+        }, 1500);
     }
 
     render() {
         return (
-            <Image
-            style={styles.sign}
-            source={require('../img/curtains.gif')}
-            />
+            <View style={styles.wrapper}>
+                <Image
+                style={styles.gif}
+                source={require('../img/curtains_floor.gif')}
+                />
+            </View>
         );
     }
 }
 
 const styles = {
-    sign: {
+    wrapper:{
+        flex: 1,
+    },
+    gif: {
+        flex: 1,
         width: width,
-        height: height
+        resizeMode: 'stretch'
     }
 };
 
