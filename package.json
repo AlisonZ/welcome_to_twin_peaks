@@ -14,7 +14,9 @@
 		"react-native-maps": "^0.15.3",
 		"react-native-router-flux": "^3.41.0",
 		"react-native-sound": "^0.10.3",
+		"react-native-sound-player": "^0.2.1",
 		"react-redux": "^5.0.5",
+		"react-static-container": "^1.0.1",
 		"redux": "^3.7.1",
 		"redux-thunk": "^2.2.0"
 	},

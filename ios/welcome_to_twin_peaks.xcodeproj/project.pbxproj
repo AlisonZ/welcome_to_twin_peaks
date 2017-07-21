@@ -37,6 +37,7 @@
 		743FF14F9D22FCD7B11DC916 /* libPods-welcome_to_twin_peaks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A744E9B09CF17B81A12F07C /* libPods-welcome_to_twin_peaks.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		E3772FAA374442FD965F1806 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E730D1C7614F483B81075744 /* libRNSound.a */; };
+		4F28CE802E464174A00312DB /* libRNSoundPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37216AEE2BB34D11A383E0C2 /* libRNSoundPlayer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -289,6 +290,8 @@
 		F0F629FCBBBDE1618CC207B0 /* Pods-welcome_to_twin_peaks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-welcome_to_twin_peaks.release.xcconfig"; path = "Pods/Target Support Files/Pods-welcome_to_twin_peaks/Pods-welcome_to_twin_peaks.release.xcconfig"; sourceTree = "<group>"; };
 		D34DE7B7E9A0432E8662DA8F /* RNSound.xcodeproj */ = {isa = PBXFileReference; name = "RNSound.xcodeproj"; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		E730D1C7614F483B81075744 /* libRNSound.a */ = {isa = PBXFileReference; name = "libRNSound.a"; path = "libRNSound.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		250ACA2650424D509B80A263 /* RNSoundPlayer.xcodeproj */ = {isa = PBXFileReference; name = "RNSoundPlayer.xcodeproj"; path = "../node_modules/react-native-sound-player/ios/RNSoundPlayer.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		37216AEE2BB34D11A383E0C2 /* libRNSoundPlayer.a */ = {isa = PBXFileReference; name = "libRNSoundPlayer.a"; path = "libRNSoundPlayer.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +320,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				743FF14F9D22FCD7B11DC916 /* libPods-welcome_to_twin_peaks.a in Frameworks */,
 				E3772FAA374442FD965F1806 /* libRNSound.a in Frameworks */,
+				4F28CE802E464174A00312DB /* libRNSoundPlayer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +501,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				D34DE7B7E9A0432E8662DA8F /* RNSound.xcodeproj */,
+				250ACA2650424D509B80A263 /* RNSoundPlayer.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1115,10 +1120,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Debug;
@@ -1140,10 +1147,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Release;
@@ -1170,6 +1179,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Debug;
@@ -1195,6 +1205,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Release;
@@ -1225,10 +1236,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Debug;
@@ -1259,10 +1272,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-sound/RNSound",
+					"$(SRCROOT)/../node_modules/react-native-sound-player/ios",
 				);
 			};
 			name = Release;
@@ -1288,6 +1303,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1312,6 +1328,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};

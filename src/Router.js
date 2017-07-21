@@ -12,7 +12,7 @@ import CurtainGif from './components/CurtainGif';
 const RouterComponent = () => {
     return (
         <Router>
-        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial />
+        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" />
         <Scene key="curtainGif" component={CurtainGif} title="Hellooo-ooo-ooo"  />
             <Scene
                 onRight={() => Actions.locationListLogic()}
