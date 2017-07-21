@@ -16,7 +16,7 @@ class CurtainGif extends Component {
             <View style={styles.wrapper}>
                 <Image
                 style={styles.gif}
-                source={require('../img/curtains_floor.gif')}
+                source={require('../img/curtains.gif')}
                 />
             </View>
         );

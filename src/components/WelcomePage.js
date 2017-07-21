@@ -12,10 +12,10 @@ welcomeClick() {
     render() {
         return (
             <TouchableWithoutFeedback onPress={() => this.welcomeClick()} >
-                <View style={styles.aligner}>
+                <View style={styles.wrapper}>
                     <Image
-                        source={require('../img/welcome-to-twin-peaks-sign.jpg')}
-                        style={styles.sign}
+                    source={require('../img/falls.jpg')}
+                    style={styles.image}
                     />
                 </View>
             </TouchableWithoutFeedback>
@@ -24,15 +24,14 @@ welcomeClick() {
 }
 
 const styles = {
-    aligner: {
-        alignSelf: 'center',
-        paddingTop: 100,
-        backgroundColor: 'green',
-        flex: 1
+    wrapper:{
+        flex: 1,
     },
-    sign: {
-        justifyContent: 'center'
-    },
+    image: {
+        flex: 1,
+        width: width,
+        resizeMode: 'stretch'
+    }
 };
 
 export default WelcomePage;
