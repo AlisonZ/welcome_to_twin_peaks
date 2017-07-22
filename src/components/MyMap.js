@@ -99,16 +99,6 @@ class MyMap extends Component {
                     </MapView.Callout>
 
                 </MapView.Marker>
-                // <MapView.Marker>
-                // key={index}
-                // coordinate={{
-                //     latitude: location.coordinate[0],
-                //     longitude: location.coordinate[1],
-                // }}
-                // onPress={() => this.markerClick(location)}
-                // title={location.tpName}
-                //
-                // </MapView.Marker>
             )}
 
             { typeof this.state.currentLocation.latitude === 'number' &&

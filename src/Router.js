@@ -8,11 +8,13 @@ import LocationShow from './components/LocationShow';
 import WelcomePage from './components/WelcomePage';
 import UserLocation from './components/UserLocation';
 import CurtainGif from './components/CurtainGif';
+import LocationOnMap from './components/LocationOnMap';
 
 const RouterComponent = () => {
     return (
         <Router>
-        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" />
+        <Scene key="locationOnMap" component={LocationOnMap} title="See on Map" />
+        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial />
         <Scene key="curtainGif" component={CurtainGif} title="Hellooo-ooo-ooo"  />
             <Scene
                 onRight={() => Actions.locationListLogic()}
@@ -20,11 +22,13 @@ const RouterComponent = () => {
                 key="map"
                 component={MyMap}
                 title="Mappy"
-            initial />
+            
+             />
             <Scene
             key="locationListLogic"
             component={LocationListLogic}
             title="Locations"
+
             />
             <Scene key="userLocation" component={UserLocation} title="User Location" />
             <Scene key="locationShow" component={LocationShow} title="Site" />
