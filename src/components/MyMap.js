@@ -90,6 +90,7 @@ class MyMap extends Component {
                     coordinate={{
                         latitude: location.coordinate[0],
                         longitude: location.coordinate[1],}}
+                    image={require('../img/green_mountains.gif')}
                     >
                     <MapView.Callout onPress={() => this.markerClick(location)}>
                             <Text>
@@ -117,7 +118,7 @@ class MyMap extends Component {
                         longitude: this.state.currentLocation.longitude
                     }}
                     title='You are here'
-                    image={require('../img/owl_room.jpg')}
+                    image={require('../img/cooper.jpg')}
                 />
 
             }
