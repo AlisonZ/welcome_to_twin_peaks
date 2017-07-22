@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, Dimensions } from 'react-native';
+import { Text, View, Dimensions, TouchableWithoutFeedback } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import MapView from 'react-native-maps';
 // import { locations } from './reducers/LocationList.json';
+
+
+const marker = require('../img/owl_room.jpg');
+const selectedMarker = require('../img/symbol.png');
 
 class MyMap extends Component {
     constructor(props) {
@@ -65,19 +69,10 @@ class MyMap extends Component {
     }
 
     markerClick(location) {
+        console.log('marker click was pressed');
+        console.log(location);
         Actions.locationShow({ location: location });
     }
-
-    checkValidLocation() {
-        if (this.state.currentLocation.latitude !== 'null'
-        && this.state.currentLocation.longitude !== 'null'
-        && typeof this.state.currentLocation.latitude === 'number'
-        && typeof this.state.currentLocation.longitude === 'number') {
-            return true;
-        }
-        return false;
-    }
-
 
     render() {
         const { locations } = this.props;
@@ -91,16 +86,28 @@ class MyMap extends Component {
             >
             {locations.map((location, index) =>
                 <MapView.Marker
-                key={index}
-                coordinate={{
-                    latitude: location.coordinate[0],
-                    longitude: location.coordinate[1],
-                }}
-                onPress={() => this.markerClick(location)}
-                title={location.tpName}
-                image={require('../img/symbol.png')}
+                    key={index}
+                    coordinate={{
+                        latitude: location.coordinate[0],
+                        longitude: location.coordinate[1],}}
+                    >
+                    <MapView.Callout onPress={() => this.markerClick(location)}>
+                            <Text>
+                            {location.tpName}
+                            </Text>
+                    </MapView.Callout>
 
-                />
+                </MapView.Marker>
+                // <MapView.Marker>
+                // key={index}
+                // coordinate={{
+                //     latitude: location.coordinate[0],
+                //     longitude: location.coordinate[1],
+                // }}
+                // onPress={() => this.markerClick(location)}
+                // title={location.tpName}
+                //
+                // </MapView.Marker>
             )}
 
             { typeof this.state.currentLocation.latitude === 'number' &&
@@ -110,6 +117,7 @@ class MyMap extends Component {
                         longitude: this.state.currentLocation.longitude
                     }}
                     title='You are here'
+                    image={require('../img/owl_room.jpg')}
                 />
 
             }

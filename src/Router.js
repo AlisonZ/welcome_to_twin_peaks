@@ -20,7 +20,7 @@ const RouterComponent = () => {
                 key="map"
                 component={MyMap}
                 title="Mappy"
-            />
+            initial />
             <Scene
             key="locationListLogic"
             component={LocationListLogic}
