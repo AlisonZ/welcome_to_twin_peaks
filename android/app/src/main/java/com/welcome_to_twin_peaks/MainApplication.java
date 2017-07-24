@@ -3,6 +3,7 @@ package com.welcome_to_twin_peaks;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.maps.MapsPackage;
 import rnsoundplayer.RNSoundPlayerPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.facebook.react.ReactNativeHost;
@@ -25,6 +26,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new MapsPackage(),
             new RNSoundPlayerPackage(),
             new RNSoundPackage()
       );

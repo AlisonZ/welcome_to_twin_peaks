@@ -1,4 +1,6 @@
 rootProject.name = 'welcome_to_twin_peaks'
+include ':react-native-maps'
+project(':react-native-maps').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-maps/lib/android')
 include ':react-native-sound-player'
 project(':react-native-sound-player').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sound-player/android')
 include ':react-native-sound'
