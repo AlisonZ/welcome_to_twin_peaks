@@ -10,6 +10,10 @@ clickButton(lat, long, url){
     return Linking.openURL(combinedUrl);
 }
 
+showOnMap(){
+    Actions.locationOnMap({ location: this.props.location});
+}
+
 getLocation(proxy) {
     const { location } = this.props;
     Actions.helloWorld();
@@ -20,8 +24,6 @@ getLocation(proxy) {
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
         const { tpName, info, tpPhoto } = this.props.location;
-        console.log('this is the show page lat', lat);
-        console.log('this is the show page long',  long);
         return (
             <View>
                 <ShowContainer>
@@ -44,7 +46,10 @@ getLocation(proxy) {
                     <CardSection>
                     <Button onPress={this.clickButton.bind(this, lat, long, url)}>
                             Get Directions
-                        </Button>
+                    </Button>
+                    <Button onPress={this.showOnMap.bind(this)}>
+                            Show on Map
+                    </Button>
                     </CardSection>
                 </ShowContainer>
             </View>
