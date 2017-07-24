@@ -15,9 +15,9 @@ const RouterComponent = () => {
     return (
         <Router>
         <Scene key="helloWorld" component={HelloWorld} title="Hello" />
-        <Scene key="locationOnMap" component={LocationOnMap} title="See on Map" />
+        <Scene key="locationOnMap" component={LocationOnMap} title="Welcome to Twin Peaks" />
         <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks" initial  />
-        <Scene key="curtainGif" component={CurtainGif} title="Hellooo-ooo-ooo"  />
+        <Scene key="curtainGif" component={CurtainGif} title="Welcome to Twin Peaks"  />
             <Scene
                 onRight={() => Actions.locationListLogic()}
                 rightTitle='Locations'

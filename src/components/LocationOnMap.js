@@ -86,7 +86,7 @@ render(){
                 coordinate={{
                     latitude: location.coordinate[0],
                     longitude: location.coordinate[1],}}
-                image={(location.tpName === this.props.location.tpName) ? require('../img/green_mountains.gif') : null}
+                image={(location.tpName === this.props.location.tpName) ? require('../img/pie.jpeg') : require('../img/green_mountains.gif')}
                 >
                 <MapView.Callout onPress={() => this.markerClick(location)}>
                         <Text>
