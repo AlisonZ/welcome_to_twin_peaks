@@ -32,7 +32,7 @@ class LocationListLogic extends Component {
             <ListContainer>
                 <CardSection>
                     <Button onPress={() => this.clickMapButton()}>
-                        Return to Map                        
+                        Return to Map
                     </Button>
                 </CardSection>
                 <ListView
@@ -44,11 +44,6 @@ class LocationListLogic extends Component {
     }
 }
 
-// const styles= {
-//     mapButtonStyle: {
-//         height: 10
-//     }
-// }
 
 const mapStateToProps = state => {
     return { locations: state.locations }

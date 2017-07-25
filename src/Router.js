@@ -16,24 +16,24 @@ const RouterComponent = () => {
         <Router>
         <Scene key="helloWorld" component={HelloWorld} title="Hello" />
         <Scene key="locationOnMap" component={LocationOnMap} title="Welcome to Twin Peaks" />
-        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks"  />
+        <Scene key="welcomePage" component={WelcomePage} title="Welcome to Twin Peaks"  initial  />
         <Scene key="curtainGif" component={CurtainGif} title="Welcome to Twin Peaks"  />
             <Scene
                 onRight={() => Actions.locationListLogic()}
                 rightTitle='Locations'
                 key="map"
                 component={MyMap}
-                title="Mappy"
+                title="Welcome to Twin Peaks"
 
              />
             <Scene
             key="locationListLogic"
             component={LocationListLogic}
-            title="Locations"
-            initial 
+            title="Welcome to Twin Peaks"
+
             />
-            <Scene key="userLocation" component={UserLocation} title="User Location" />
-            <Scene key="locationShow" component={LocationShow} title="Site" />
+            <Scene key="userLocation" component={UserLocation} title="Welcome to Twin Peaks" />
+            <Scene key="locationShow" component={LocationShow} title="Welcome to Twin Peaks" />
         </Router>
     );
 };

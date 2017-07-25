@@ -19,6 +19,10 @@ getLocation(proxy) {
     Actions.helloWorld();
 }
 
+goHome() {
+    Actions.welcomePage();
+}
+
     render() {
         const lat = this.props.location.coordinate[0];
         const long = this.props.location.coordinate[1];
@@ -49,6 +53,9 @@ getLocation(proxy) {
                     </Button>
                     <Button onPress={this.showOnMap.bind(this)}>
                             Show on Map
+                    </Button>
+                    <Button onPress={this.goHome.bind()}>
+                            Home
                     </Button>
                     </CardSection>
                 </ShowContainer>

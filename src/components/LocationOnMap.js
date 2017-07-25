@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, Dimensions } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
@@ -29,7 +29,6 @@ class LocationOnMap extends Component {
     }
 
     componentDidMount() {
-        // console.log('component did mount');
         navigator.geolocation.getCurrentPosition(
             (position) => {
                 this.setState({
