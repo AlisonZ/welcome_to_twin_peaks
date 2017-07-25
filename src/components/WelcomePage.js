@@ -6,7 +6,7 @@ import { Actions } from 'react-native-router-flux';
 class WelcomePage extends Component {
 
 welcomeClick() {
-    Actions.curtainGif();
+    Actions.map();
 }
 
     render() {
@@ -29,7 +29,7 @@ const styles = {
     },
     image: {
         flex: 1,
-        resizeMode: 'stretch',
+        resizeMode: 'cover',
         width: width,
         // height: height
     }
