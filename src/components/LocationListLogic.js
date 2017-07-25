@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ListView, View,  } from 'react-native';
+import { ListView, View, Text, TouchableWithoutFeedback } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
 import { ListContainer } from './styling/ListContainer';
@@ -28,12 +28,11 @@ class LocationListLogic extends Component {
     }
 
     render() {
-        const { mapButtonStyle } = styles;
         return(
             <ListContainer>
                 <CardSection>
-                    <Button style={mapButtonStyle} onPress={() => this.clickMapButton()}>
-                        Return to Map
+                    <Button onPress={() => this.clickMapButton()}>
+                        Return to Map                        
                     </Button>
                 </CardSection>
                 <ListView
@@ -45,11 +44,11 @@ class LocationListLogic extends Component {
     }
 }
 
-const styles= {
-    mapButtonStyle: {
-        height: 10
-    }
-}
+// const styles= {
+//     mapButtonStyle: {
+//         height: 10
+//     }
+// }
 
 const mapStateToProps = state => {
     return { locations: state.locations }
