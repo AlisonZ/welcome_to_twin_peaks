@@ -3,7 +3,7 @@ import { ListView, View,  } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
 import { ListContainer } from './styling/ListContainer';
-import { Button } from './common';
+import { Button, CardSection } from './common';
 import { Actions } from 'react-native-router-flux';
 //
 class LocationListLogic extends Component {
@@ -31,9 +31,11 @@ class LocationListLogic extends Component {
         const { mapButtonStyle } = styles;
         return(
             <ListContainer>
-                <Button style={mapButtonStyle} onPress={() => this.clickMapButton()}>
-                    Map
-                </Button>
+                <CardSection>
+                    <Button style={mapButtonStyle} onPress={() => this.clickMapButton()}>
+                        Return to Map
+                    </Button>
+                </CardSection>
                 <ListView
                     dataSource ={this.dataSource}
                     renderRow={this.renderRow}
