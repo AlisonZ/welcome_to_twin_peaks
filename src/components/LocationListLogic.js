@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { ListView, View } from 'react-native';
+import { ListView, View,  } from 'react-native';
 import { connect } from 'react-redux';
 import LocationList from './LocationList';
 import { ListContainer } from './styling/ListContainer';
+import { Button } from './common';
+import { Actions } from 'react-native-router-flux';
 //
 class LocationListLogic extends Component {
     componentWillMount() {
@@ -13,6 +15,9 @@ class LocationListLogic extends Component {
         this.dataSource = ds.cloneWithRows(this.props.locations);
     }
 
+    clickMapButton() {
+        Actions.map();
+    }
 
     renderRow(location) {
         return (
@@ -23,14 +28,24 @@ class LocationListLogic extends Component {
     }
 
     render() {
+        const { mapButtonStyle } = styles;
         return(
             <ListContainer>
+                <Button style={mapButtonStyle} onPress={() => this.clickMapButton()}>
+                    Map
+                </Button>
                 <ListView
                     dataSource ={this.dataSource}
                     renderRow={this.renderRow}
                 />
             </ListContainer>
         );
+    }
+}
+
+const styles= {
+    mapButtonStyle: {
+        height: 10
     }
 }
 

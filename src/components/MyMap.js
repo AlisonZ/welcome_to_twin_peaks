@@ -69,8 +69,6 @@ class MyMap extends Component {
     }
 
     markerClick(location) {
-        console.log('marker click was pressed');
-        console.log(location);
         Actions.locationShow({ location: location });
     }
 
