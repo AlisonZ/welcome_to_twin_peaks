@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, Dimensions, TouchableWithoutFeedback, Linking } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
@@ -72,46 +72,59 @@ class MyMap extends Component {
         Actions.locationShow({ location: location });
     }
 
+    callOutClick(location){
+        console.log(location);
+        const lat = location.coordinate[0];
+        const long = location.coordinate[1];
+        const url = 'http://maps.apple.com/?daddr=';
+        const combinedUrl = url + lat + ',' + long;
+        return Linking.openURL(combinedUrl);
+    }
+
+
     render() {
         const { locations } = this.props;
 
         return (
             <View style={styles.container}>
-            <MapView
-            style={styles.map}
-            region={this.state.region}
-            onRegionChange={this.onRegionChange}
-            >
-            {locations.map((location, index) =>
-                <MapView.Marker
-                    key={index}
-                    coordinate={{
-                        latitude: location.coordinate[0],
-                        longitude: location.coordinate[1],}}
-                    image={require('../img/green_mountains.gif')}
-                    >
-                    <MapView.Callout onPress={() => this.markerClick(location)}>
-                            <Text>
-                            {location.tpName}
-                            </Text>
-                    </MapView.Callout>
+                <MapView
+                style={styles.map}
+                region={this.state.region}
+                onRegionChange={this.onRegionChange}
+                >
+                {locations.map((location, index) =>
+                    <MapView.Marker
+                        key={index}
+                        coordinate={{
+                            latitude: location.coordinate[0],
+                            longitude: location.coordinate[1],}}
+                        image={require('../img/green_mountains.gif')}
+                        >
+                        <MapView.Callout onPress={() => this.markerClick(location)}>
+                                <Text>
+                                    {location.tpName}
+                                </Text>
+                                <Text onPress={() => this.callOutClick(location)} style={styles.directionsCallout}>
+                                    Directions
+                                </Text>
+                        </MapView.Callout>
 
-                </MapView.Marker>
-            )}
+                    </MapView.Marker>
+                )}
 
-            { typeof this.state.currentLocation.latitude === 'number' &&
-                <MapView.Marker
-                    coordinate={{
-                        latitude: this.state.currentLocation.latitude,
-                        longitude: this.state.currentLocation.longitude
-                    }}
-                    title='You are here'
-                    image={require('../img/cooper.jpg')}
-                />
+                { typeof this.state.currentLocation.latitude === 'number' &&
+                    <MapView.Marker
+                        coordinate={{
+                            latitude: this.state.currentLocation.latitude,
+                            longitude: this.state.currentLocation.longitude
+                        }}
+                        title='You are here'
+                        image={require('../img/cooper.jpg')}
+                    />
 
-            }
+                }
 
-        </MapView>
+            </MapView>
         </View>
     );
 }
@@ -128,6 +141,12 @@ const styles = {
         width: width,
         height: height,
         backgroundColor: '#888'
+    },
+    directionsCallout: {
+        paddingTop: 30,
+        paddingBottom: 30,
+        borderColor: '#ddd',
+        borderBottomWidth: 1,
     }
 };
 
