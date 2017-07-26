@@ -29,9 +29,9 @@ const styles = {
     },
     image: {
         flex: 1,
-        resizeMode: 'cover',
+        resizeMode: 'stretch',
         width: width,
-        // height: height
+        height: height
     }
 };
 
