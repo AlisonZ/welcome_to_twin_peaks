@@ -9,6 +9,10 @@ import Router from './Router';
 import MyMap from './components/MyMap'
 
 class App extends Component {
+    componentWillMount() {
+        console.disableYellowBox = true;
+    }
+
     render() {
         return (
             <Provider store={createStore(reducers)}>
