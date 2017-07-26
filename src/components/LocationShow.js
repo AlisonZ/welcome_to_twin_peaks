@@ -66,6 +66,13 @@ checkforAltImage() {
                 />
             </TouchableOpacity>
         );
+    } else {
+        return(
+            <Image
+            style={image}
+            source={{ uri: this.state.uri }}
+            />
+        );
     }
 }
 
@@ -144,7 +151,7 @@ const styles = {
     },
     image: {
         width: width,
-        height: 200,
+        height: 250,
         borderWidth: 1,
         marginLeft: -5
     },

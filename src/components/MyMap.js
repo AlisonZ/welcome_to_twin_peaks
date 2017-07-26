@@ -14,8 +14,8 @@ class MyMap extends Component {
         super(props);
         this.state = {
             region: {
-                latitude: 47.542085,
-                longitude: -121.836647,
+                latitude: 47.566667,
+                longitude: -122.2,
                 latitudeDelta: 1.5,
                 longitudeDelta: 1.5,
             },
@@ -33,8 +33,8 @@ class MyMap extends Component {
             (position) => {
                 this.setState({
                     region: {
-                        latitude: 47.542085,
-                        longitude: -121.836647,
+                        latitude: 47.566667,
+                        longitude: -122.2,
                         latitudeDelta: 1.5,
                         longitudeDelta: 1.5,
                     },
