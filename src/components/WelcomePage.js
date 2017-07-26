@@ -10,7 +10,7 @@ welcomeClick() {
 }
 
     render() {
-        const { backgroundImage, textStyle, container} = styles;
+        const { backgroundImage, textStyle, container } = styles;
         return (
             <TouchableWithoutFeedback onPress={() => this.welcomeClick()}>
                 <View style={container}>

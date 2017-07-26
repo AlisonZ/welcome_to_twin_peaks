@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking, Dimensions, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, Linking, Dimensions, TouchableWithoutFeedback, ScrollView } from 'react-native';
 var { width } = Dimensions.get('window');
 import { CardSection, Card } from './common';
 import { ShowContainer } from './styling/ShowContainer';
@@ -45,7 +45,7 @@ checkForRealName() {
         const { tpName, info, tpPhoto, location } = this.props.location;
         const { title, background, colorBackground, image, showButtons } = styles;
         return (
-            <View style={background}>
+            <ScrollView style={background}>
                 <ShowContainer >
                     <CardSection style={{ alignSelf: 'center' }}>
                         <Text style={title}>
@@ -89,7 +89,7 @@ checkForRealName() {
                         Hello
                     </Footer>
                 </ShowContainer>
-            </View>
+            </ScrollView>
         );
     }
 }
