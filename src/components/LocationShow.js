@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking, ImageBackground } from 'react-native';
+import { View, Text, Image, Linking, Dimensions } from 'react-native';
+var { width } = Dimensions.get('window');
 import { CardSection, Card } from './common';
 import { ShowContainer } from './styling/ShowContainer';
 import { Actions } from 'react-native-router-flux';
 import { ShowButton } from './ShowButton.js';
+import { Footer } from './Footer.js';
 
 class LocationShow extends Component {
 clickButton(lat, long, url){
@@ -41,21 +43,21 @@ checkForRealName() {
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
         const { tpName, info, tpPhoto, location } = this.props.location;
-        const { title, background, colorBackground } = styles;
+        const { title, background, colorBackground, image } = styles;
         return (
-            <View>
+            <View style={background}>
                 <ShowContainer >
-                    <CardSection>
+                    <CardSection style={{ alignSelf: 'center' }}>
                         <Text style={title}>
                             {tpName}
                         </Text>
                     </CardSection>
-                    <CardSection>
+                    <View>
                         <Image
-                            style={{width: 150, height: 150}}
+                            style={image}
                             source={{ uri: tpPhoto }}
                         />
-                    </CardSection>
+                    </View>
                     <Card>
                         <CardSection>
                             <Text>
@@ -83,6 +85,9 @@ checkForRealName() {
                             Home
                     </ShowButton>
                     </CardSection>
+                    <Footer>
+                        Hello
+                    </Footer>
                 </ShowContainer>
             </View>
         );
@@ -91,7 +96,12 @@ checkForRealName() {
 
 const styles = {
     title: {
-        fontSize: 30
+        alignSelf: 'center',
+        fontSize: 30,
+        textAlign: 'center',
+        color: '#90560c',
+        textShadowColor: '#58fe22',
+        textShadowOffset: {width: 2, height: 2},
     },
     background: {
         backgroundColor: 'transparent',
@@ -99,6 +109,16 @@ const styles = {
         alignSelf: 'center',
         flex: 1
     },
+    image: {
+        width: width,
+        height: 200,
+        borderWidth: 1,
+        marginLeft: -5
+
+    },
+    background: {
+        // backgroundColor: '#63070e'
+    }
 };
 
 export default LocationShow;

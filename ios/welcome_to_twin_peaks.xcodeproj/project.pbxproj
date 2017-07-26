@@ -1267,6 +1267,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gbs.welcome-to-twin-peaks";
 				PRODUCT_NAME = welcome_to_twin_peaks;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1294,6 +1295,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "gbs.welcome-to-twin-peaks";
 				PRODUCT_NAME = welcome_to_twin_peaks;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";

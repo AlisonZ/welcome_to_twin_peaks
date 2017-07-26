@@ -18,7 +18,7 @@ class CurtainGif extends Component {
             <View style={styles.wrapper}>
                 <FadeImage
                 style={styles.gif}
-                duration = {2100}
+                duration = {1100}
                 source={require('../img/curtains.gif')}
                 />
             </View>
