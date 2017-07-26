@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, ImageBackground } from 'react-native';
 
 const ShowButton = ({ onPress, children, style }) => {
-    const { buttonStyle, textStyle } = styles;
+    const { buttonStyle, textStyle, background } = styles;
 
     return (
         <TouchableOpacity onPress={onPress} style={buttonStyle}>
@@ -10,15 +10,17 @@ const ShowButton = ({ onPress, children, style }) => {
                 { children }
             </Text>
         </TouchableOpacity>
-
     );
 };
 
 const styles = {
     textStyle:{
         alignSelf: 'center',
-        color: '#007aff',
-        fontSize: 16,
+        color: '#90560c',
+        textShadowColor: '#58fe22',
+        textShadowOffset: {width: 2, height: 2},
+        textShadowOpacity: 0.2,
+        fontSize: 20,
         fontWeight: '600',
         paddingTop: 10,
         paddingBottom: 10
@@ -26,14 +28,14 @@ const styles = {
     buttonStyle: {
         flex: 1,
         alignSelf: 'stretch',
-        backgroundColor: '#fff',
+        backgroundColor: 'transparent',
         borderRadius: 5,
         borderWidth: 1,
-        borderColor: '#007aff',
+        borderColor: 'red',
         marginLeft: 5,
-        marginRight: 5
+        marginRight: 5,
+    },
 
-    }
 };
 
 export { ShowButton };

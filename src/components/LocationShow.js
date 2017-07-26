@@ -40,8 +40,8 @@ checkForRealName() {
         const lat = this.props.location.coordinate[0];
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
-        const { tpName, info, tpPhoto, location, realName } = this.props.location;
-        const { title, buttonShowStyle } = styles;
+        const { tpName, info, tpPhoto, location } = this.props.location;
+        const { title, background, colorBackground } = styles;
         return (
             <View>
                 <ShowContainer >
@@ -72,9 +72,10 @@ checkForRealName() {
                         </CardSection>
                     </Card>
                     <CardSection >
-                    <ShowButton onPress={this.clickButton.bind(this, lat, long, url)}>
-                            Get Directions
-                    </ShowButton>
+                            <ShowButton onPress={this.clickButton.bind(this, lat, long, url)}>
+                                    <Text style={colorBackground}>Get Directions</Text>
+                            </ShowButton>
+
                     <ShowButton onPress={this.showOnMap.bind(this)}>
                             Show on Map
                     </ShowButton>
@@ -91,7 +92,13 @@ checkForRealName() {
 const styles = {
     title: {
         fontSize: 30
-    }
+    },
+    background: {
+        backgroundColor: 'transparent',
+        resizeMode: 'stretch',
+        alignSelf: 'center',
+        flex: 1
+    },
 };
 
 export default LocationShow;
