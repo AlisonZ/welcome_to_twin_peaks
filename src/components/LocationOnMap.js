@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions, Linking } from 'react-native';
+import { Text, View, Dimensions, Linking, TouchableWithoutFeedback, Image } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
@@ -11,10 +11,10 @@ class LocationOnMap extends Component {
         super(props);
         this.state = {
             region: {
-                latitude: 0,
-                longitude: 0,
-                latitudeDelta: 0,
-                longitudeDelta: 0,
+                latitude: 47.542085,
+                longitude: -121.836647,
+                latitudeDelta: 1.5,
+                longitudeDelta: 1.5,
             },
             currentLocation: {
                 latitude: 0,
@@ -81,7 +81,8 @@ callOutClick(location){
 }
 
 render(){
-    const { locations } = this.props;
+    const { locations} = this.props;
+    const { nameCallout, directionsCallout } = styles;
     return(
         <View style={styles.container}>
         <MapView
@@ -98,12 +99,12 @@ render(){
                 image={(location.tpName === this.props.location.tpName) ? require('../img/pie.jpeg') : require('../img/green_mountains.gif')}
                 >
                 <MapView.Callout onPress={() => this.markerClick(location)}>
-                        <Text>
+                        <Text style={nameCallout}>
                         {location.tpName}
                         </Text>
-                        <Text onPress={() => this.callOutClick(location)} style={styles.directionsCallout}>
-                            Directions
-                        </Text>
+                        <TouchableWithoutFeedback onPress={() => this.callOutClick(location)}>
+                            <Image source={require('../img/get_directions.png')} style={directionsCallout} />
+                        </TouchableWithoutFeedback>
                 </MapView.Callout>
 
             </MapView.Marker>
@@ -135,6 +136,15 @@ const styles = {
         width: width,
         height: height,
         backgroundColor: '#888'
+    },
+    directionsCallout: {
+        padding: 10,
+        alignSelf: 'center',
+    },
+    nameCallout: {
+        fontSize: 16,
+        paddingBottom: 16,
+        fontWeight: '900',
     }
 };
 

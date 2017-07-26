@@ -36,11 +36,14 @@ class LocationList extends Component {
 const styles = {
     titleStyle: {
         alignSelf: 'center',
-        fontSize: 30,
+        fontSize: 20,
+        fontWeight: '600',
         textAlign: 'center',
         color: '#90560c',
         textShadowColor: '#58fe22',
-        textShadowOffset: {width: 2, height: 2},
+        textShadowOffset: {width: 1, height: 2},
+        paddingTop: 15,
+        paddingBottom: 20
     },
     listBackground: {
         backgroundColor: 'white'

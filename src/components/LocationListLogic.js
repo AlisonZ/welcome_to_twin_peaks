@@ -21,7 +21,7 @@ class LocationListLogic extends Component {
 
     renderRow(location) {
         return (
-                <View>
+                <View style={{paddingTop: 15}}>
                     <LocationList location={location} />
                 </View>
         );
@@ -30,11 +30,6 @@ class LocationListLogic extends Component {
     render() {
         return(
             <ListContainer>
-                <CardSection>
-                    <Button onPress={() => this.clickMapButton()}>
-                        Return to Map
-                    </Button>
-                </CardSection>
                 <ListView
                     dataSource ={this.dataSource}
                     renderRow={this.renderRow}

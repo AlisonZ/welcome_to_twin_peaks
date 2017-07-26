@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking, Dimensions } from 'react-native';
+import { View, Text, Image, Linking, Dimensions, TouchableWithoutFeedback } from 'react-native';
 var { width } = Dimensions.get('window');
 import { CardSection, Card } from './common';
 import { ShowContainer } from './styling/ShowContainer';
@@ -58,14 +58,14 @@ checkForRealName() {
                             source={{ uri: tpPhoto }}
                         />
                     </View>
-                    <Card>
+                    <View>
                         <CardSection>
                             <Text>
                                 Location: {location}
                             </Text>
                         </CardSection>
                         {this.checkForRealName()}
-                    </Card>
+                    </View>
                     <Card>
                         <CardSection>
                             <Text>
@@ -98,6 +98,7 @@ const styles = {
     title: {
         alignSelf: 'center',
         fontSize: 30,
+        fontWeight: '600',
         textAlign: 'center',
         color: '#90560c',
         textShadowColor: '#58fe22',

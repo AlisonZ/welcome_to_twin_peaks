@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions, TouchableWithoutFeedback, Linking } from 'react-native';
+import { Text, View, Dimensions, TouchableWithoutFeedback, Linking, Image } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 import MapView from 'react-native-maps';
-// import { locations } from './reducers/LocationList.json';
 
 
 const marker = require('../img/owl_room.jpg');
@@ -15,10 +14,10 @@ class MyMap extends Component {
         super(props);
         this.state = {
             region: {
-                latitude: 0,
-                longitude: 0,
-                latitudeDelta: 0,
-                longitudeDelta: 0,
+                latitude: 47.542085,
+                longitude: -121.836647,
+                latitudeDelta: 1.5,
+                longitudeDelta: 1.5,
             },
             currentLocation: {
                 latitude: 0,
@@ -73,7 +72,7 @@ class MyMap extends Component {
     }
 
     callOutClick(location){
-        console.log(location);
+        console.log('call out click happened');
         const lat = location.coordinate[0];
         const long = location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
@@ -84,9 +83,10 @@ class MyMap extends Component {
 
     render() {
         const { locations } = this.props;
+        const { container, nameCallout, directionsCallout } = styles;
 
         return (
-            <View style={styles.container}>
+            <View style={container}>
                 <MapView
                 style={styles.map}
                 region={this.state.region}
@@ -100,13 +100,13 @@ class MyMap extends Component {
                             longitude: location.coordinate[1],}}
                         image={require('../img/green_mountains.gif')}
                         >
-                        <MapView.Callout onPress={() => this.markerClick(location)}>
-                                <Text>
+                        <MapView.Callout >
+                                <Text style={nameCallout} onPress={() => this.markerClick(location)}>
                                     {location.tpName}
                                 </Text>
-                                <Text onPress={() => this.callOutClick(location)} style={styles.directionsCallout}>
-                                    Directions
-                                </Text>
+                                <TouchableWithoutFeedback onPress={() => this.callOutClick(location)}>
+                                    <Image source={require('../img/get_directions.png')} style={directionsCallout} />
+                                </TouchableWithoutFeedback>
                         </MapView.Callout>
 
                     </MapView.Marker>
@@ -143,10 +143,13 @@ const styles = {
         backgroundColor: '#888'
     },
     directionsCallout: {
-        paddingTop: 30,
-        paddingBottom: 30,
-        borderColor: '#ddd',
-        borderBottomWidth: 1,
+        padding: 10,
+        alignSelf: 'center',
+    },
+    nameCallout: {
+        fontSize: 16,
+        paddingBottom: 16,
+        fontWeight: '900'
     }
 };
 
