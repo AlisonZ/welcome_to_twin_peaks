@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, View, TouchableWithoutFeedback, Text, Image } from 'react-native';
+import { Dimensions, View, TouchableWithoutFeedback, Text, Image} from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { Actions } from 'react-native-router-flux';
 

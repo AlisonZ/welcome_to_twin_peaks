@@ -14,28 +14,56 @@ import HelloWorld from './components/HelloWorld';
 const RouterComponent = () => {
     return (
         <Router>
-        <Scene key="helloWorld" component={HelloWorld} title="Hello" />
-        <Scene key="locationOnMap" component={LocationOnMap} title="Twin Peaks" />
-        <Scene key="welcomePage" component={WelcomePage} title="Twin Peaks"  initial  />
+        <Scene
+            key="main"
+            navigationBarStyle={styles.navigationBar}
+            titleStyle={styles.titleStyle}
+            rightStyle={styles.rightStyle}
+        >
+            <Scene key="helloWorld" component={HelloWorld} title="Hello" />
+            <Scene key="locationOnMap" component={LocationOnMap} title="Twin Peaks" />
+            <Scene
+                key="welcomePage"
+                component={WelcomePage}
+                title="Twin Peaks"
+                initial
+            />
             <Scene
                 onRight={() => Actions.locationListLogic()}
                 rightTitle='Locations'
                 key="map"
                 component={MyMap}
                 title="Twin Peaks"
-             />
-            <Scene
-            key="locationListLogic"
-            component={LocationListLogic}
-            title="Twin Peaks"
-            onRight={() => Actions.map()}
-            rightTitle='Return to Map'
-
+                backButtonBarStyle={{ color: 'white' }}
+                rightButtonTextStyle={{ color: 'white' }}
             />
-            <Scene key="userLocation" component={UserLocation} title="Twin Peaks" />
-            <Scene key="locationShow" component={LocationShow} title="Twin Peaks" />
+                <Scene
+                key="locationListLogic"
+                component={LocationListLogic}
+                title="Twin Peaks"
+                onRight={() => Actions.map()}
+                rightTitle='Back to Map'
+                rightButtonTextStyle={{ color: 'white' }}
+
+                />
+                <Scene key="userLocation" component={UserLocation} title="Twin Peaks" />
+                <Scene key="locationShow" component={LocationShow} title="Twin Peaks" />
+        </Scene>
         </Router>
     );
+};
+
+const styles = {
+navigationBar: {
+    backgroundColor: 'black'
+},
+titleStyle: {
+    color: 'white',
+    fontSize: 22
+},
+rightStyle: {
+    color: 'green'
+}
 };
 
 export default RouterComponent;

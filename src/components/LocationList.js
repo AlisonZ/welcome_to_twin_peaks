@@ -16,19 +16,19 @@ class LocationList extends Component {
     }
 
     render() {
-        const { titleStyle, listBackground } = styles;
+        const { titleStyle } = styles;
         const { tpName } = this.props.location;
 
         return (
-            // <View style={listBackground}>
                 <LocationCard >
                 <TouchableWithoutFeedback onPress={this.onRowPress.bind(this) }>
+                    <View>
                         <Text style={titleStyle}>
                             {tpName}
                         </Text>
+                    </View>
                     </TouchableWithoutFeedback>
                 </LocationCard>
-            // </View>
         );
     }
 }
@@ -48,12 +48,6 @@ const styles = {
     listBackground: {
         backgroundColor: 'white'
     },
-    // container: {
-    //     borderWidth: 2,
-    //     // borderColor: 'red',
-    //     alignSelf: 'center'
-    // }
-
 };
 
 const mapStateToProps = state => {

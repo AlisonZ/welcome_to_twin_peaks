@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking, Dimensions, TouchableWithoutFeedback, ScrollView } from 'react-native';
+import { View, Text, Image, Linking, Dimensions, ScrollView } from 'react-native';
 var { width } = Dimensions.get('window');
 import { CardSection, Card } from './common';
 import { ShowContainer } from './styling/ShowContainer';
@@ -43,10 +43,10 @@ checkForRealName() {
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
         const { tpName, info, tpPhoto, location } = this.props.location;
-        const { title, background, colorBackground, image, showButtons } = styles;
+        const { title, background, colorBackground, image, showButtons, container } = styles;
         return (
             <ScrollView style={background}>
-                <ShowContainer >
+                <ShowContainer>
                     <CardSection style={{ alignSelf: 'center' }}>
                         <Text style={title}>
                             {tpName}
@@ -122,7 +122,7 @@ const styles = {
     },
     background: {
         // backgroundColor: '#63070e'
-    }
+    },
 };
 
 export default LocationShow;
