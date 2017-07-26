@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dimensions, View, Image, TouchableWithoutFeedback, Text } from 'react-native';
+import { Dimensions, View, TouchableWithoutFeedback, Text, Image } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { Actions } from 'react-native-router-flux';
 
@@ -15,7 +15,7 @@ welcomeClick() {
             <TouchableWithoutFeedback onPress={() => this.welcomeClick()}>
                 <View style={container}>
                     <Image style={backgroundImage} source={require('../img/curtains.gif')}>
-                        <Text style={textStyle}>ENTER</Text>
+                        <Text style={textStyle}>CLICK TO ENTER</Text>
                     </Image>
                 </View>
             </TouchableWithoutFeedback>
@@ -39,12 +39,13 @@ const styles = {
         alignItems: 'center',
     },
     textStyle: {
-        color: 'green',
         fontSize: 60,
-        // paddingTop: 100,
-        backgroundColor: 'blue',
+        // fontWeight: '600',
         justifyContent: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#90560c',
+        textShadowColor: '#58fe22',
+        textShadowOffset: {width: 3, height: 3},
     }
 };
 
