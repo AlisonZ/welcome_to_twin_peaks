@@ -23,7 +23,9 @@ const styles = {
         fontSize: 20,
         fontWeight: '700',
         paddingTop: 10,
-        paddingBottom: 10
+        paddingBottom: 10,
+        fontFamily: 'HelveticaNeue-Medium'
+
     },
     buttonStyle: {
         flex: 1,

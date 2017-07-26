@@ -43,7 +43,10 @@ const styles = {
         textShadowColor: '#58fe22',
         textShadowOffset: {width: 1, height: 2},
         paddingTop: 15,
-        paddingBottom: 20
+        paddingBottom: 20,
+        fontFamily: 'HelveticaNeue-Medium'
+
+
     },
     listBackground: {
         backgroundColor: 'white'

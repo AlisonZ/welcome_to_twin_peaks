@@ -26,12 +26,16 @@ goHome() {
     Actions.welcomePage();
 }
 checkForRealName() {
+    const { information, element } = styles;
     if (this.props.location.realName.length > 0) {
         console.log(this.props.location.realName);
         return (
             <CardSection>
-                <Text>
-                    Real Name: {this.props.location.realName}
+                <Text style={element}>
+                    Real Name:
+                    <Text style={information}>
+                        {this.props.location.realName}
+                    </Text>
                 </Text>
             </CardSection>
         );
@@ -43,10 +47,10 @@ checkForRealName() {
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
         const { tpName, info, tpPhoto, location } = this.props.location;
-        const { title, background, colorBackground, image, showButtons, container } = styles;
+        const { title, background, colorBackground, image, showButtons, element, information, text } = styles;
         return (
-            <ScrollView style={background}>
-                <ShowContainer>
+            <ScrollView >
+                <ShowContainer >
                     <CardSection style={{ alignSelf: 'center' }}>
                         <Text style={title}>
                             {tpName}
@@ -60,15 +64,18 @@ checkForRealName() {
                     </View>
                     <View>
                         <CardSection>
-                            <Text>
-                                Location: {location}
+                            <Text style={element}>
+                                Location:
+                                <Text style={information}>
+                                    {location}
+                                </Text>
                             </Text>
                         </CardSection>
                         {this.checkForRealName()}
                     </View>
                     <Card>
                         <CardSection>
-                            <Text>
+                            <Text style={text}>
                                 {info}
                             </Text>
                         </CardSection>
@@ -103,6 +110,7 @@ const styles = {
         color: '#90560c',
         textShadowColor: '#58fe22',
         textShadowOffset: {width: 2, height: 2},
+        fontFamily: 'HelveticaNeue-Medium'
     },
     background: {
         backgroundColor: 'transparent',
@@ -120,9 +128,20 @@ const styles = {
     showButtons: {
         paddingTop: 20
     },
-    background: {
-        // backgroundColor: '#63070e'
+    element: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        fontFamily: 'Helvetica'
+
     },
+    information: {
+        fontWeight: '300',
+        fontFamily: 'Helvetica'
+    },
+    text: {
+        fontFamily: 'Helvetica'
+    }
+
 };
 
 export default LocationShow;

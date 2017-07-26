@@ -46,6 +46,7 @@ const styles = {
         color: '#90560c',
         textShadowColor: '#58fe22',
         textShadowOffset: {width: 3, height: 3},
+        fontFamily: 'HelveticaNeue-Medium'
     }
 };
 
