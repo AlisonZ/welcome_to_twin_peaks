@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Linking, Dimensions, ScrollView } from 'react-native';
+import { View, Text, Image, Linking, Dimensions, ScrollView, TouchableOpacity } from 'react-native';
 var { width } = Dimensions.get('window');
 import { CardSection, Card } from './common';
 import { ShowContainer } from './styling/ShowContainer';
@@ -8,6 +8,11 @@ import { ShowButton } from './ShowButton.js';
 import { Footer } from './Footer.js';
 
 class LocationShow extends Component {
+    constructor(props){
+        super(props);
+        this.state = { uri: this.props.location.tpPhoto }
+    }
+
 clickButton(lat, long, url){
     const combinedUrl = url + lat + ',' + long;
     return Linking.openURL(combinedUrl);
@@ -25,6 +30,7 @@ getLocation(proxy) {
 goHome() {
     Actions.welcomePage();
 }
+
 checkForRealName() {
     const { information, element } = styles;
     if (this.props.location.realName.length > 0) {
@@ -38,6 +44,27 @@ checkForRealName() {
                     </Text>
                 </Text>
             </CardSection>
+        );
+    }
+}
+
+
+checkforAltImage() {
+    const { image } = styles;
+    const { tpPhoto, altPhoto } = this.props.location;
+    if (altPhoto) {
+        return (
+            <TouchableOpacity onPress={() => {
+                this.setState(
+                    { uri: altPhoto }
+                );
+
+            }}>
+                <Image
+                    style={image}
+                    source={{ uri: this.state.uri }}
+                />
+            </TouchableOpacity>
         );
     }
 }
@@ -57,10 +84,7 @@ checkForRealName() {
                         </Text>
                     </CardSection>
                     <View>
-                        <Image
-                            style={image}
-                            source={{ uri: tpPhoto }}
-                        />
+                        {this.checkforAltImage()}
                     </View>
                     <View>
                         <CardSection>
@@ -123,7 +147,6 @@ const styles = {
         height: 200,
         borderWidth: 1,
         marginLeft: -5
-
     },
     showButtons: {
         paddingTop: 20
