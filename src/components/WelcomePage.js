@@ -10,12 +10,13 @@ welcomeClick() {
 }
 
     render() {
+        const { image } = styles;
         return (
             <TouchableWithoutFeedback onPress={() => this.welcomeClick()}>
                 <View style={styles.wrapper}>
                     <Image
-                    style={styles.image}
-                    source={require('../img/falls.jpg')}
+                    style={image}
+                    source={require('../img/curtains.gif')}
                     />
                 </View>
             </TouchableWithoutFeedback>
@@ -31,7 +32,10 @@ const styles = {
         flex: 1,
         resizeMode: 'stretch',
         width: width,
-        height: height
+        height: height,
+        backgroundColor: 'transparent',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 };
 
