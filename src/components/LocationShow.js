@@ -43,7 +43,7 @@ checkForRealName() {
         const long = this.props.location.coordinate[1];
         const url = 'http://maps.apple.com/?daddr=';
         const { tpName, info, tpPhoto, location } = this.props.location;
-        const { title, background, colorBackground, image } = styles;
+        const { title, background, colorBackground, image, showButtons } = styles;
         return (
             <View style={background}>
                 <ShowContainer >
@@ -73,17 +73,17 @@ checkForRealName() {
                             </Text>
                         </CardSection>
                     </Card>
-                    <CardSection >
-                            <ShowButton onPress={this.clickButton.bind(this, lat, long, url)}>
-                                    <Text style={colorBackground}>Get Directions</Text>
-                            </ShowButton>
+                    <CardSection style={showButtons}>
+                        <ShowButton onPress={this.clickButton.bind(this, lat, long, url)}>
+                                <Text style={colorBackground}>Get Directions</Text>
+                        </ShowButton>
 
-                    <ShowButton onPress={this.showOnMap.bind(this)}>
-                            Show on Map
-                    </ShowButton>
-                    <ShowButton onPress={this.goHome.bind()}>
-                            Home
-                    </ShowButton>
+                        <ShowButton onPress={this.showOnMap.bind(this)}>
+                                Show on Map
+                        </ShowButton>
+                        <ShowButton onPress={this.goHome.bind()}>
+                                Home
+                        </ShowButton>
                     </CardSection>
                     <Footer>
                         Hello
@@ -115,6 +115,9 @@ const styles = {
         borderWidth: 1,
         marginLeft: -5
 
+    },
+    showButtons: {
+        paddingTop: 20
     },
     background: {
         // backgroundColor: '#63070e'

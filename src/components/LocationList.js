@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
-import { CardSection, Card } from './common';
-import { ListContainer } from './styling/ListContainer'
+import { CardSection } from './common';
+// import { ListContainer } from './styling/ListContainer'
 import * as actions from '../actions';
+import { LocationCard } from './LocationCard.js';
 
 
 class LocationList extends Component {
@@ -14,30 +15,43 @@ class LocationList extends Component {
     }
 
     render() {
-        const { titleStyle } = styles;
+        const { titleStyle, listBackground } = styles;
         const { tpName } = this.props.location;
 
         return (
-            <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
-                <View>
-                    <Card>
-                        <CardSection>
-                            <Text style={titleStyle}>
-                                {tpName}
-                            </Text>
-                        </CardSection>
-                    </Card>
-                </View>
+            <View style={listBackground}>
+            <TouchableWithoutFeedback onPress={this.onRowPress.bind(this) }>
+                <LocationCard >
+                    <CardSection style={{alignSelf: 'center'}}>
+                        <Text style={titleStyle}>
+                            {tpName}
+                        </Text>
+                    </CardSection>
+                </LocationCard>
             </TouchableWithoutFeedback>
+            </View>
         );
     }
 }
 
 const styles = {
-    titleStyle:{
-        fontSize: 18,
-        paddingLeft: 15
-    }
+    titleStyle: {
+        alignSelf: 'center',
+        fontSize: 30,
+        textAlign: 'center',
+        color: '#90560c',
+        textShadowColor: '#58fe22',
+        textShadowOffset: {width: 2, height: 2},
+    },
+    listBackground: {
+        backgroundColor: 'white'
+    },
+    // container: {
+    //     borderWidth: 2,
+    //     // borderColor: 'red',
+    //     alignSelf: 'center'
+    // }
+
 };
 
 const mapStateToProps = state => {

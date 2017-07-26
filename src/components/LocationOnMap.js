@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Dimensions } from 'react-native';
+import { Text, View, Dimensions, Linking } from 'react-native';
 var { height, width } = Dimensions.get('window');
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
@@ -70,6 +70,16 @@ markerClick(location) {
 
     Actions.locationShow({ location: location });
 }
+
+callOutClick(location){
+    console.log(location);
+    const lat = location.coordinate[0];
+    const long = location.coordinate[1];
+    const url = 'http://maps.apple.com/?daddr=';
+    const combinedUrl = url + lat + ',' + long;
+    return Linking.openURL(combinedUrl);
+}
+
 render(){
     const { locations } = this.props;
     return(
@@ -90,6 +100,9 @@ render(){
                 <MapView.Callout onPress={() => this.markerClick(location)}>
                         <Text>
                         {location.tpName}
+                        </Text>
+                        <Text onPress={() => this.callOutClick(location)} style={styles.directionsCallout}>
+                            Directions
                         </Text>
                 </MapView.Callout>
 
