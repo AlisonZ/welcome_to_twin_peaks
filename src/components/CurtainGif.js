@@ -10,7 +10,7 @@ class CurtainGif extends Component {
         this.timeoutHandle = setTimeout(() => {
             console.log('i want this to work!');
             Actions.map();
-        }, 2100);
+        }, 1100);
     }
 
     render() {

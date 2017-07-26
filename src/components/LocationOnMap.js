@@ -11,18 +11,18 @@ class LocationOnMap extends Component {
         super(props);
         this.state = {
             region: {
-                latitude: 'null',
-                longitude: 'null',
-                latitudeDelta: 'null',
-                longitudeDelta: 'null',
+                latitude: 0,
+                longitude: 0,
+                latitudeDelta: 0,
+                longitudeDelta: 0,
             },
             currentLocation: {
-                latitude: 'null',
-                longitude: 'null'
+                latitude: 0,
+                longitude: 0
             },
             selectedLocation: {
-                latitude: 'null',
-                longitude: 'null'
+                latitude: 0,
+                longitude: 0
             }
         };
         this.onRegionChange = this.onRegionChange.bind(this);
