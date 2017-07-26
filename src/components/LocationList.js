@@ -11,6 +11,7 @@ import { LocationCard } from './LocationCard.js';
 class LocationList extends Component {
 
     onRowPress() {
+        console.log('i made it here');
         Actions.locationShow({ location: this.props.location });
     }
 
@@ -19,17 +20,15 @@ class LocationList extends Component {
         const { tpName } = this.props.location;
 
         return (
-            <View style={listBackground}>
-            <TouchableWithoutFeedback onPress={this.onRowPress.bind(this) }>
+            // <View style={listBackground}>
                 <LocationCard >
-                    <CardSection style={{alignSelf: 'center'}}>
+                <TouchableWithoutFeedback onPress={this.onRowPress.bind(this) }>
                         <Text style={titleStyle}>
                             {tpName}
                         </Text>
-                    </CardSection>
+                    </TouchableWithoutFeedback>
                 </LocationCard>
-            </TouchableWithoutFeedback>
-            </View>
+            // </View>
         );
     }
 }
